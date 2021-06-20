@@ -114,6 +114,7 @@ export const Sidebar = (props) => {
 						<Link
 							href='https://github.com/camlemessurier'
 							alt='Github'
+							aria-label='Github'
 							isExternal
 						>
 							<Icon as={VscGithubInverted} w={10} h={10} />
@@ -121,6 +122,7 @@ export const Sidebar = (props) => {
 						<Link
 							href='https://twitter.com/camlemessurier'
 							alt='Twitter'
+							aria-label='Twitter'
 							isExternal
 						>
 							<Icon as={VscTwitter} w={10} h={10} />
