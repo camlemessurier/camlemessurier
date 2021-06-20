@@ -236,9 +236,7 @@ const Index = () => {
 						color={tipColor[colorMode]}
 						bg={tipBgColor[colorMode]}
 					>
-						<Text fontWeight='500'>
-							Hint: click on the CL icon in the sidebar
-						</Text>
+						<Text fontWeight='500'>Hint: click on the "CL" icon</Text>
 					</Box>
 				</Container>
 			</motion.div>
