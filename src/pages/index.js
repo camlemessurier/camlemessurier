@@ -82,6 +82,10 @@ const Index = () => {
 				/>
 				<link rel='manifest' href='/site.webmanifest' />
 				<meta name='theme-color' content='#276749' />
+				<meta
+					name='google-site-verification'
+					content='CgF_CClTUWgVQjHKNXKlfbJ34Ktz1OBfbn8R3nwJ_p8'
+				/>
 			</Head>
 			<Sidebar />
 			<motion.div
