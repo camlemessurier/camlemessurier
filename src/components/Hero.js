@@ -1,17 +1,21 @@
-import { Flex, Heading } from '@chakra-ui/react'
+import { Flex, Heading, useColorMode } from '@chakra-ui/react';
 
-export const Hero = ({ title }) => (
-  <Flex justifyContent="center" alignItems="center" height="100vh">
-    <Heading
-      fontSize="10vw"
-      bgGradient="linear(to-l, #7928CA, #FF0080)"
-      bgClip="text"
-    >
-      {title}
-    </Heading>
-  </Flex>
-)
+export const Hero = ({ title, ...props }) => {
+	const { colorMode } = useColorMode();
+
+	const color = { light: 'gray.700', dark: 'white' };
+
+	return (
+		<Heading
+			fontSize={{ base: '34px', md: '50px', xl: '3vw' }}
+			color={color[colorMode]}
+			{...props}
+		>
+			{title}
+		</Heading>
+	);
+};
 
 Hero.defaultProps = {
-  title: 'with-chakra-ui',
-}
+	title: 'Hello, Welcome to my resume',
+};
