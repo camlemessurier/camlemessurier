@@ -35,6 +35,8 @@ const Index = () => {
 	const tipColor = { light: 'gray.700', dark: 'gray.200' };
 	const tipBgColor = { light: 'gray.100', dark: '' };
 
+	const labelCol = { light: 'green.800', dark: 'gray.100' };
+
 	const [fadeIn, setFadeIn] = useState(false);
 
 	const variants = {
@@ -111,22 +113,22 @@ const Index = () => {
 
 					<Wrap mb={10}>
 						<WrapItem>
-							<Badge size='lg' color='green.800'>
+							<Badge size='lg' color={labelCol[colorMode]}>
 								UI/UX
 							</Badge>
 						</WrapItem>
 						<WrapItem>
-							<Badge size='lg' color='green.800'>
+							<Badge size='lg' color={labelCol[colorMode]}>
 								Database Design
 							</Badge>
 						</WrapItem>
 						<WrapItem>
-							<Badge size='lg' color='green.800'>
+							<Badge size='lg' color={labelCol[colorMode]}>
 								Machine Learning
 							</Badge>
 						</WrapItem>
 						<WrapItem>
-							<Badge size='lg' color='green.800'>
+							<Badge size='lg' color={labelCol[colorMode]}>
 								SOLID
 							</Badge>
 						</WrapItem>
@@ -171,55 +173,55 @@ const Index = () => {
 					<Section heading='Technologies'>
 						<Wrap>
 							<WrapItem>
-								<Badge size='lg' size='lg' color='green.800'>
+								<Badge size='lg' size='lg' color={labelCol[colorMode]}>
 									Typescript
 								</Badge>
 							</WrapItem>
 							<WrapItem>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									React
 								</Badge>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									Next.js
 								</Badge>
 							</WrapItem>
 							<WrapItem>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									Node
 								</Badge>
 							</WrapItem>
 							<WrapItem>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									.NET
 								</Badge>
 							</WrapItem>
 							<WrapItem>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									SQL
 								</Badge>
 							</WrapItem>
 							<WrapItem>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									Docker
 								</Badge>
 							</WrapItem>
 							<WrapItem>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									Git
 								</Badge>
 							</WrapItem>
 							<WrapItem>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									CI/CD
 								</Badge>
 							</WrapItem>
 							<WrapItem>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									Keras
 								</Badge>
 							</WrapItem>
 							<WrapItem>
-								<Badge size='lg' color='green.800'>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									VSCode
 								</Badge>
 							</WrapItem>
@@ -227,7 +229,8 @@ const Index = () => {
 					</Section>
 
 					<Box
-						borderLeft='5px solid green'
+						borderLeft='5px solid'
+						borderLeftColor={labelCol[colorMode]}
 						p={3}
 						my={5}
 						color={tipColor[colorMode]}
