@@ -14,6 +14,7 @@ import {
 	Wrap,
 	Fade,
 	useTimeout,
+	WrapItem,
 } from '@chakra-ui/react';
 import { Hero } from '../components/Hero';
 import { Container } from '../components/Container';
@@ -22,6 +23,7 @@ import { Section } from '../components/Section';
 import { Item } from '../components/Item';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 const Index = () => {
 	const { colorMode } = useColorMode();
@@ -43,7 +45,7 @@ const Index = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setFadeIn(true);
-		}, 1000);
+		}, 500);
 	}, []);
 
 	return (
@@ -53,6 +55,34 @@ const Index = () => {
 			p='2vw'
 			flexDirection={{ base: 'column', md: 'row' }}
 		>
+			<Head>
+				<title>Cam Le Messurier</title>
+				<meta charSet='utf-8' />
+				<meta name='viewport' content='initial-scale=1.0, width=device-width' />
+				<meta
+					name='description'
+					content='Junior Developer Resume for Cam Le Messurier.'
+				/>
+				<link
+					rel='apple-touch-icon'
+					sizes='180x180'
+					href='/apple-touch-icon.png'
+				/>
+				<link
+					rel='icon'
+					type='image/png'
+					sizes='32x32'
+					href='/favicon-32x32.png'
+				/>
+				<link
+					rel='icon'
+					type='image/png'
+					sizes='16x16'
+					href='/favicon-16x16.png'
+				/>
+				<link rel='manifest' href='/site.webmanifest' />
+				<meta name='theme-color' content='#276749' />
+			</Head>
 			<Sidebar />
 			<motion.div
 				animate={!fadeIn ? 'hidden' : 'visible'}
@@ -76,10 +106,26 @@ const Index = () => {
 					</Text>
 
 					<Wrap mb={10}>
-						<Badge variant='outline'>UI/UX</Badge>
-						<Badge variant='outline'>Database Design</Badge>
-						<Badge variant='outline'>Machine Learning</Badge>
-						<Badge variant='outline'>SOLID</Badge>
+						<WrapItem>
+							<Badge size='lg' color='green.800'>
+								UI/UX
+							</Badge>
+						</WrapItem>
+						<WrapItem>
+							<Badge size='lg' color='green.800'>
+								Database Design
+							</Badge>
+						</WrapItem>
+						<WrapItem>
+							<Badge size='lg' color='green.800'>
+								Machine Learning
+							</Badge>
+						</WrapItem>
+						<WrapItem>
+							<Badge size='lg' color='green.800'>
+								SOLID
+							</Badge>
+						</WrapItem>
 					</Wrap>
 
 					<Section heading='Employment'>
@@ -120,17 +166,59 @@ const Index = () => {
 
 					<Section heading='Technologies'>
 						<Wrap>
-							<Badge variant='outline'>Typescript</Badge>
-							<Badge variant='outline'>React</Badge>
-							<Badge variant='outline'>Next.js</Badge>
-							<Badge variant='outline'>Node</Badge>
-							<Badge variant='outline'>.NET</Badge>
-							<Badge variant='outline'>SQL</Badge>
-							<Badge variant='outline'>Docker</Badge>
-							<Badge variant='outline'>Git</Badge>
-							<Badge variant='outline'>CI/CD</Badge>
-							<Badge variant='outline'>Keras</Badge>
-							<Badge variant='outline'>VSCode</Badge>
+							<WrapItem>
+								<Badge size='lg' size='lg' color='green.800'>
+									Typescript
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color='green.800'>
+									React
+								</Badge>
+								<Badge size='lg' color='green.800'>
+									Next.js
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color='green.800'>
+									Node
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color='green.800'>
+									.NET
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color='green.800'>
+									SQL
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color='green.800'>
+									Docker
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color='green.800'>
+									Git
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color='green.800'>
+									CI/CD
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color='green.800'>
+									Keras
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color='green.800'>
+									VSCode
+								</Badge>
+							</WrapItem>
 						</Wrap>
 					</Section>
 

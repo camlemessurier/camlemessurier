@@ -18,7 +18,7 @@ export const Item = ({ title, timePeriod, listItems }) => {
 	return (
 		<Box mb={8}>
 			<Heading size='md'>{title}</Heading>
-			<Text fontWeight='600' fontSize='14' color='gray.500' mb={2}>
+			<Text fontWeight='600' fontSize='14' color='gray.700' mb={2}>
 				{timePeriod}
 			</Text>
 			<List spacing={1}>

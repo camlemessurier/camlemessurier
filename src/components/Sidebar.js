@@ -49,7 +49,7 @@ export const Sidebar = (props) => {
 				position='sticky'
 				overflow='hidden'
 				top='2vw'
-				shadow='md'
+				shadow='xl'
 			>
 				<Box>
 					<Flex
@@ -111,10 +111,18 @@ export const Sidebar = (props) => {
 				</Box>
 				<Box mt={7}>
 					<HStack spacing={30}>
-						<Link href='https://github.com/camlemessurier' isExternal>
+						<Link
+							href='https://github.com/camlemessurier'
+							alt='Github'
+							isExternal
+						>
 							<Icon as={VscGithubInverted} w={10} h={10} />
 						</Link>
-						<Link href='https://twitter.com/camlemessurier' isExternal>
+						<Link
+							href='https://twitter.com/camlemessurier'
+							alt='Twitter'
+							isExternal
+						>
 							<Icon as={VscTwitter} w={10} h={10} />
 						</Link>
 					</HStack>

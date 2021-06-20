@@ -28,6 +28,8 @@ const theme = extendTheme({
 			baseStyle: {
 				p: 3,
 				borderRadius: 10,
+				fontSize: '16px',
+				shadow: 'sm',
 			},
 		},
 	},
