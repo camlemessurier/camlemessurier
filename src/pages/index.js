@@ -181,6 +181,8 @@ const Index = () => {
 								<Badge size='lg' color={labelCol[colorMode]}>
 									React
 								</Badge>
+							</WrapItem>
+							<WrapItem>
 								<Badge size='lg' color={labelCol[colorMode]}>
 									Next.js
 								</Badge>
