@@ -29,7 +29,7 @@ const theme = extendTheme({
 				p: 3,
 				borderRadius: 10,
 				fontSize: '16px',
-				shadow: 'sm',
+				shadow: 'md',
 			},
 		},
 	},

@@ -20,9 +20,20 @@ export const Item = ({ title, timePeriod, listItems }) => {
 
 	const timePeriodColor = { light: 'gray.700', dark: 'grey.300' };
 	const iconColor = { light: 'green.700', dark: 'grey.200' };
+	const cardColor = { light: '', dark: 'rgba(0, 0, 0, 0.15)' };
+	const border = { light: '1px', dark: '' };
 
 	return (
-		<Box mb={8}>
+		<Box
+			mb={8}
+			shadow='md'
+			rounded='md'
+			p={5}
+			borderWidth={border[colorMode]}
+			borderLeft='7px solid'
+			borderLeftColor={iconColor[colorMode]}
+			bg={cardColor[colorMode]}
+		>
 			<Heading size='md'>{title}</Heading>
 			<Text
 				fontWeight='600'

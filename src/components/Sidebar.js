@@ -37,7 +37,7 @@ export const Sidebar = (props) => {
 		>
 			<Flex
 				py={{ base: '30px', md: '5vw' }}
-				w={{ base: '94vw', md: '30vw' }}
+				w={{ base: '100%', md: '30vw' }}
 				h={{ base: 'auto', md: 'calc(100vh - 4vw)' }}
 				maxWidth={{ base: '', lg: '500px' }}
 				flexDirection='column'
@@ -49,7 +49,7 @@ export const Sidebar = (props) => {
 				position='sticky'
 				overflow='hidden'
 				top='2vw'
-				shadow='xl'
+				shadow='md'
 			>
 				<Box>
 					<Flex
@@ -73,6 +73,7 @@ export const Sidebar = (props) => {
 								mb='2vw'
 								onClick={toggleColorMode}
 								cursor='pointer'
+								shadow='md'
 							>
 								<Text fontWeight='600' fontSize='2vw'>
 									CL

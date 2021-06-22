@@ -13,8 +13,8 @@ import {
 	Box,
 	Wrap,
 	Fade,
-	useTimeout,
 	WrapItem,
+	Divider,
 } from '@chakra-ui/react';
 import { Hero } from '../components/Hero';
 import { Container } from '../components/Container';
@@ -35,7 +35,7 @@ const Index = () => {
 	const tipColor = { light: 'gray.700', dark: 'gray.200' };
 	const tipBgColor = { light: 'gray.100', dark: '' };
 
-	const labelCol = { light: 'green.800', dark: 'gray.100' };
+	const labelCol = { light: 'green.700', dark: 'gray.100' };
 
 	const [fadeIn, setFadeIn] = useState(false);
 
@@ -102,7 +102,7 @@ const Index = () => {
 						<Box p={1} bg='green.700' mb={6} />
 					</motion.div>
 
-					<Text mb={50}>
+					<Text mb={6}>
 						Self motivated junior developer, looking for further development
 						experience. Proficient in various platforms, languages, and
 						engineering practices. Able to effectively self-manage during
@@ -171,7 +171,7 @@ const Index = () => {
 					</Section>
 
 					<Section heading='Technologies'>
-						<Wrap>
+						<Wrap mb={10}>
 							<WrapItem>
 								<Badge size='lg' size='lg' color={labelCol[colorMode]}>
 									Typescript
@@ -229,7 +229,7 @@ const Index = () => {
 					</Section>
 
 					<Box
-						borderLeft='5px solid'
+						borderLeft='7px solid'
 						borderLeftColor={labelCol[colorMode]}
 						p={3}
 						my={5}
