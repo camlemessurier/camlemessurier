@@ -9,7 +9,7 @@ export default class Document extends NextDocument {
 					{/* Global Site Tag (gtag.js) - Google Analytics */}
 					<script
 						async
-						src={`https://www.googletagmanager.com/gtag/js?id=G-8DK1KYYSNN`}
+						src={`https://www.googletagmanager.com/gtag/js?id=G-JSP4YKH5DG`}
 					/>
 					<script
 						dangerouslySetInnerHTML={{
@@ -17,7 +17,7 @@ export default class Document extends NextDocument {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-8DK1KYYSNN', {
+            gtag('config', 'G-JSP4YKH5DG', {
               page_path: window.location.pathname,
             });
           `,
@@ -26,14 +26,7 @@ export default class Document extends NextDocument {
 				</Head>
 				<body>
 					{/* Make Color mode to persists when you refresh the page. */}
-					<noscript>
-						<noscript
-							dangerouslySetInnerHTML={{
-								__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4ZGVP4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-							}}
-						></noscript>
-					</noscript>
+
 					<ColorModeScript />
 					<Main />
 					<NextScript />
