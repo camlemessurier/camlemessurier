@@ -120,17 +120,17 @@ const Index = () => {
 						</WrapItem>
 						<WrapItem>
 							<Badge size='lg' color={labelCol[colorMode]}>
-								Database Design
+								Clean Code
 							</Badge>
 						</WrapItem>
 						<WrapItem>
 							<Badge size='lg' color={labelCol[colorMode]}>
-								Machine Learning
+								Software Architecture
 							</Badge>
 						</WrapItem>
 						<WrapItem>
 							<Badge size='lg' color={labelCol[colorMode]}>
-								SOLID
+								Cloud Computing
 							</Badge>
 						</WrapItem>
 					</Wrap>
@@ -140,8 +140,9 @@ const Index = () => {
 							title='Software Engineer, Newton Green Technologies, Newcastle'
 							timePeriod='FEBRUARY 2021 - PRESENT'
 							listItems={[
-								'Work on a variety of projects, developing both consumer facing websites and internal web applications for various businesses and organisations.',
-								'Technologies used include React, .NET, TFS, Visual Studio and Wordpress.',
+								'Full stack web developer responsible for end-to-end web app development',
+								'Worked on a wide range of projects, including both internal and consumer facing applications',
+								'Primary technologies included .NET, React, Laravel and Worpress',
 							]}
 						/>
 						<Item
@@ -149,7 +150,7 @@ const Index = () => {
 							timePeriod='JULY 2019 - FEBRUARY 2021'
 							listItems={[
 								'Designed and implemented a full stack safety management tool, to transition the business from the existing paper system',
-								'Technologies used include React, Node, OAuth, Docker, and Gitlab',
+								'Technologies used include Next, Node, GraphQl, OAuth, Docker, and Gitlab',
 								'Conducted sound power and environmental noise monitoring tests in accordance with relevant noise standards and criteria',
 								'Data entry and reporting',
 							]}
@@ -171,7 +172,7 @@ const Index = () => {
 						/>
 					</Section>
 
-					<Section heading='Technologies'>
+					<Section heading='Skillsd'>
 						<Wrap mb={10}>
 							<WrapItem>
 								<Badge size='lg' size='lg' color={labelCol[colorMode]}>
@@ -185,7 +186,7 @@ const Index = () => {
 							</WrapItem>
 							<WrapItem>
 								<Badge size='lg' color={labelCol[colorMode]}>
-									Next.js
+									Next
 								</Badge>
 							</WrapItem>
 							<WrapItem>
@@ -218,14 +219,25 @@ const Index = () => {
 									CI/CD
 								</Badge>
 							</WrapItem>
+
 							<WrapItem>
 								<Badge size='lg' color={labelCol[colorMode]}>
-									Keras
+									VSCode
 								</Badge>
 							</WrapItem>
 							<WrapItem>
 								<Badge size='lg' color={labelCol[colorMode]}>
-									VSCode
+									Azure
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color={labelCol[colorMode]}>
+									REST
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color={labelCol[colorMode]}>
+									GraphQL
 								</Badge>
 							</WrapItem>
 						</Wrap>
