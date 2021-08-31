@@ -172,7 +172,7 @@ const Index = () => {
 						/>
 					</Section>
 
-					<Section heading='Skillsd'>
+					<Section heading='Skills'>
 						<Wrap mb={10}>
 							<WrapItem>
 								<Badge size='lg' size='lg' color={labelCol[colorMode]}>
