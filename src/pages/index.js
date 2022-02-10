@@ -176,7 +176,7 @@ const Index = () => {
 							listItems={[
 								'Advanced databases, algorithms, system and network security, web development, predictive analytics, operating systems and human computer interaction, linear algebra, statistical inference, machine learning ',
 								'Dr Robert M Sheahan Memorial Scholarship',
-								'Work Integrated learning at startup venture FinishBy4 - Preact, Apollo, Webpack, Ruby on Rails',
+								'Work Integrated Learning project at startup venture FinishBy4 - Preact, Apollo, Webpack, Ruby on Rails',
 								'Completed all but one course to fulfil the degree. Planning on finishing in semester 2, 2022',
 							]}
 						/>
