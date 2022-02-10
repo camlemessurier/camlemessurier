@@ -11,6 +11,8 @@ const breakpoints = createBreakpoints({
 });
 
 const theme = extendTheme({
+	initialColorMode: 'light',
+	useSystemColorMode: true,
 	styles: {
 		global: {
 			body: {
@@ -29,7 +31,6 @@ const theme = extendTheme({
 				p: 3,
 				borderRadius: 10,
 				fontSize: '16px',
-				shadow: 'md',
 			},
 		},
 	},

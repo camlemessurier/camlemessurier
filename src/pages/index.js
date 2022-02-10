@@ -1,34 +1,25 @@
 import {
-	Link as ChakraLink,
-	Text,
-	Code,
-	List,
-	ListIcon,
-	ListItem,
-	Flex,
-	Heading,
-	Stack,
 	Badge,
-	useColorMode,
 	Box,
+	Flex,
+	Text,
+	useColorMode,
 	Wrap,
-	Fade,
 	WrapItem,
-	Divider,
 } from '@chakra-ui/react';
-import { Hero } from '../components/Hero';
-import { Container } from '../components/Container';
-import { Sidebar } from '../components/Sidebar';
-import { Section } from '../components/Section';
-import { Item } from '../components/Item';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import { Container } from '../components/Container';
+import { Hero } from '../components/Hero';
+import { Item } from '../components/Item';
+import { Section } from '../components/Section';
+import { Sidebar } from '../components/Sidebar';
 
 const Index = () => {
 	const { colorMode } = useColorMode();
 
-	const bgColor = { light: 'gray.50', dark: 'green.900' };
+	const bgColor = { light: 'white', dark: 'green.900' };
 
 	const color = { light: 'gray.700', dark: 'gray.100' };
 
@@ -98,21 +89,28 @@ const Index = () => {
 				initial={false}
 			>
 				<Container>
-					<Hero title='Hello, Welcome to my resume' mb={1} />
-					<motion.div animate={{ width: 300 }}>
-						<Box p={1} bg='green.700' mb={6} />
-					</motion.div>
+					<Box pos='sticky' pt={35} top={0} bgColor={bgColor[colorMode]}>
+						<Hero title='Hello, welcome to my resume' mb={2} />
+						<motion.div
+							animate={{ width: 300 }}
+							transition={{ delay: 0.5, duration: 1 }}
+							style={{ width: '0px' }}
+						>
+							<Box p={1} bg='green.700' mb={8} />
+						</motion.div>
+					</Box>
 
-					<Text mb={6}>
-						Self motivated junior developer, looking for further development
-						experience. Proficient in various platforms, languages, and
-						engineering practices. Able to effectively self-manage during
-						independent projects, as well as collaborate as part of a productive
-						team. Well-rounded and professional team player dedicated to
-						continued learning and development.
+					<Text mb={8} mt={2}>
+						Product driven junior software engineer, with 1.5+ years of
+						professional experience. Well-versed in modern technology and
+						engineering best practices with a strong background in computer
+						science and mathematics. Loves to work as part of a team and
+						share/listen to ideas to improve both product and team performance.
+						Well-rounded and professional team player dedicated to continued
+						learning and development.
 					</Text>
 
-					<Wrap mb={10}>
+					<Wrap mb={12}>
 						<WrapItem>
 							<Badge size='lg' color={labelCol[colorMode]}>
 								UI/UX
@@ -125,57 +123,74 @@ const Index = () => {
 						</WrapItem>
 						<WrapItem>
 							<Badge size='lg' color={labelCol[colorMode]}>
-								Software Architecture
+								Agile
 							</Badge>
 						</WrapItem>
 						<WrapItem>
 							<Badge size='lg' color={labelCol[colorMode]}>
-								Cloud Computing
+								Full Stack
+							</Badge>
+						</WrapItem>
+						<WrapItem>
+							<Badge size='lg' color={labelCol[colorMode]}>
+								Machine Learning
 							</Badge>
 						</WrapItem>
 					</Wrap>
 
 					<Section heading='Employment'>
 						<Item
+							title='Software Engineer, BodyMindLife Online (Startup), Newcastle'
+							timePeriod='OCTOBER 2021 - PRESENT'
+							listItems={[
+								'Front end web developer collaborating on design, planning, implementation and automated testing of the BML Online Platform',
+								'Worked as part of an agile team; sprints, backlog refinement and retrospectives',
+								'Primary technologies included Next, Typescript, Apollo Client, Contentful, Tailwind, Cypress, Jest',
+							]}
+						/>
+						<Item
 							title='Software Engineer, Newton Green Technologies, Newcastle'
-							timePeriod='FEBRUARY 2021 - PRESENT'
+							timePeriod='FEBRUARY 2021 - SEPTEMBER 2021'
 							listItems={[
 								'Full stack web developer responsible for end-to-end web app development',
-								'Worked on a wide range of projects, including both internal and consumer facing applications',
-								'Primary technologies included .NET, React, Laravel and Worpress',
+								'As a contractor, I worked on a wide range of projects, including Whistle (Lyrical Care), FeralScan, Breast Cancer Trials, ANZUP, TROG and others',
+								'Primary technologies included Laravel, .NET, React and Wordpress',
 							]}
 						/>
 						<Item
 							title='Junior Developer / Acoustic Technician, Global Acoustics, Thornton'
 							timePeriod='JULY 2019 - FEBRUARY 2021'
 							listItems={[
-								'Designed and implemented a full stack safety management tool, to transition the business from the existing paper system',
-								'Technologies used include Next, Node, GraphQl, OAuth, Docker, and Gitlab',
+								'Designed and implemented a full stack safety management tool (GA Forms), to transition the business from the existing paper system',
+								'Technologies used include Next, Express, GraphQl, OAuth, Docker, NGINX, TypeORM, Chakra UI, and Gitlab',
 								'Conducted sound power and environmental noise monitoring tests in accordance with relevant noise standards and criteria',
-								'Data entry and reporting',
+								'Report writing',
 							]}
 						/>
 					</Section>
 
 					<Section heading='Education'>
 						<Item
-							title='Bachelor of Computer Science / Mathematics, University of Newcastle'
+							title='Bachelor of Computer Science (Data Science) / Mathematics (Statistics), University of Newcastle'
 							timePeriod='FEBRUARY 2018 - PRESENT'
 							listItems={[
-								'Currently completing my fourth and final year of my undergraduate degree',
-								'Topics include: Linear algebra, calculus, statistical inference, machine learning, databases, algorithms, system and network security, web development, predictive analytics, operating systems and human computer interaction.',
+								'Advanced databases, algorithms, system and network security, web development, predictive analytics, operating systems and human computer interaction, linear algebra, statistical inference, machine learning ',
+								'Dr Robert M Sheahan Memorial Scholarship',
+								'Work Integrated learning at startup venture FinishBy4 - Preact, Apollo, Webpack, Ruby on Rails',
+								'Completed all but one course to fulfil the degree. Planning on finishing in semester 2, 2022',
 							]}
 						/>
 						<Item
 							title='High School Certificate, Taree High School'
 							timePeriod='FEBRUARY 2011 - NOVEMBER 2017'
+							listItems={['School Captain', '96.95 ATAR']}
 						/>
 					</Section>
 
 					<Section heading='Skills'>
 						<Wrap mb={10}>
 							<WrapItem>
-								<Badge size='lg' size='lg' color={labelCol[colorMode]}>
+								<Badge size='lg' color={labelCol[colorMode]}>
 									Typescript
 								</Badge>
 							</WrapItem>
@@ -191,14 +206,10 @@ const Index = () => {
 							</WrapItem>
 							<WrapItem>
 								<Badge size='lg' color={labelCol[colorMode]}>
-									Node
+									Express
 								</Badge>
 							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									.NET
-								</Badge>
-							</WrapItem>
+
 							<WrapItem>
 								<Badge size='lg' color={labelCol[colorMode]}>
 									SQL
@@ -212,6 +223,21 @@ const Index = () => {
 							<WrapItem>
 								<Badge size='lg' color={labelCol[colorMode]}>
 									Git
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color={labelCol[colorMode]}>
+									R
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color={labelCol[colorMode]}>
+									Tensorflow
+								</Badge>
+							</WrapItem>
+							<WrapItem>
+								<Badge size='lg' color={labelCol[colorMode]}>
+									Go
 								</Badge>
 							</WrapItem>
 							<WrapItem>
@@ -251,7 +277,9 @@ const Index = () => {
 						color={tipColor[colorMode]}
 						bg={tipBgColor[colorMode]}
 					>
-						<Text fontWeight='500'>Hint: click on the "CL" icon</Text>
+						<Text fontWeight='500'>
+							To toggle colour scheme, click on the "CL" icon
+						</Text>
 					</Box>
 				</Container>
 			</motion.div>

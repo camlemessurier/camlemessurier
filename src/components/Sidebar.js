@@ -1,20 +1,18 @@
 import {
-	Flex,
 	Box,
-	Heading,
-	useColorMode,
-	Text,
-	List,
-	ListItem,
-	Divider,
-	ListIcon,
+	Flex,
 	HStack,
-	Link,
 	Icon,
+	Link,
+	List,
+	ListIcon,
+	ListItem,
+	Text,
+	useColorMode,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { TiLocationArrow, TiMail, TiPhone } from 'react-icons/ti';
 import { VscGithubInverted, VscTwitter } from 'react-icons/vsc';
-import { motion } from 'framer-motion';
 
 export const Sidebar = (props) => {
 	const bgColor = { light: 'green.800', dark: 'gray.50' };
@@ -110,6 +108,7 @@ export const Sidebar = (props) => {
 						</List>
 					</Box>
 				</Box>
+
 				<Box mt={7}>
 					<HStack spacing={30}>
 						<Link

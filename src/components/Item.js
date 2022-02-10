@@ -1,19 +1,13 @@
+import { ChevronRightIcon } from '@chakra-ui/icons';
 import {
-	Link as ChakraLink,
-	Text,
-	Code,
+	Box,
+	Heading,
 	List,
 	ListIcon,
 	ListItem,
-	Flex,
-	Heading,
-	Stack,
-	Badge,
-	Box,
+	Text,
 	useColorMode,
 } from '@chakra-ui/react';
-
-import { ChevronRightIcon } from '@chakra-ui/icons';
 
 export const Item = ({ title, timePeriod, listItems }) => {
 	const { colorMode } = useColorMode();
@@ -26,13 +20,14 @@ export const Item = ({ title, timePeriod, listItems }) => {
 	return (
 		<Box
 			mb={8}
-			shadow='md'
-			rounded='md'
-			p={5}
-			borderWidth={border[colorMode]}
+			p={4}
+			pl={7}
+			// rounded={'md'}
+			// borderWidth={border[colorMode]}
 			borderLeft='7px solid'
 			borderLeftColor={iconColor[colorMode]}
 			bg={cardColor[colorMode]}
+			// shadow='md'
 		>
 			<Heading size='md'>{title}</Heading>
 			<Text
