@@ -60,30 +60,29 @@ export const Sidebar = (props) => {
 						flexDirection='column'
 						mb='3vw'
 					>
-						{!isPrint && (
-							<motion.button
-								whileHover={{ scale: 1.1 }}
-								whileTap={{ scale: 0.9 }}
+						<motion.button
+							whileHover={{ scale: 1.1 }}
+							whileTap={{ scale: 0.9 }}
+						>
+							<Flex
+								borderRadius={4000}
+								bgColor={color[colorMode]}
+								color={bgColor[colorMode]}
+								justifyContent='center'
+								alignItems='center'
+								h='5vw'
+								w='5vw'
+								mb='2vw'
+								onClick={toggleColorMode}
+								cursor='pointer'
+								shadow='md'
 							>
-								<Flex
-									borderRadius={4000}
-									bgColor={color[colorMode]}
-									color={bgColor[colorMode]}
-									justifyContent='center'
-									alignItems='center'
-									h='5vw'
-									w='5vw'
-									mb='2vw'
-									onClick={toggleColorMode}
-									cursor='pointer'
-									shadow='md'
-								>
-									<Text fontWeight='600' fontSize='2vw'>
-										CL
-									</Text>
-								</Flex>
-							</motion.button>
-						)}
+								<Text fontWeight='600' fontSize='2vw'>
+									CL
+								</Text>
+							</Flex>
+						</motion.button>
+
 						<Text fontSize={30} fontWeight='600' mb={4} textAlign='center'>
 							Cam Le Messurier
 						</Text>
@@ -120,7 +119,7 @@ export const Sidebar = (props) => {
 										</Link>
 									</ListItem>
 
-									{/* <ListItem>
+									<ListItem>
 										<Link
 											href='https://www.linkedin.com/in/camlemessurier/'
 											isExternal
@@ -128,7 +127,7 @@ export const Sidebar = (props) => {
 											<ListIcon as={SiLinkedin} />
 											linkedin.com/in/camlemessurier/
 										</Link>
-									</ListItem> */}
+									</ListItem>
 								</>
 							)}
 						</List>

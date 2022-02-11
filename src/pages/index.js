@@ -145,6 +145,7 @@ const Index = () => {
 						</WrapItem>
 					</Wrap>
 
+					{isPrint && <Box h={370}></Box>}
 					<Section heading='Employment'>
 						<Item
 							title='Software Engineer, BodyMindLife Online (Startup), Newcastle'
@@ -176,6 +177,7 @@ const Index = () => {
 						/>
 					</Section>
 
+					{isPrint && <Box h={220}></Box>}
 					<Section heading='Education'>
 						<Item
 							title='Bachelor of Computer Science (Data Science) / Mathematics (Statistics), University of Newcastle'
@@ -193,6 +195,26 @@ const Index = () => {
 							listItems={['School Captain', '96.95 ATAR']}
 						/>
 					</Section>
+
+					{isPrint && (
+						<Section heading='References'>
+							<Item
+								title='Sahil Harriram, Tech Lead'
+								timePeriod='BodyMindLife Online'
+								listItems={['0434459255']}
+							/>
+							<Item
+								title='Ben Harvey, Senior Engineer'
+								timePeriod='BodyMindLife Online'
+								listItems={['0432402447']}
+							/>
+							<Item
+								title='Michael Newton, Newton Green Technologies'
+								timePeriod='Director'
+								listItems={['0432402447', 'newton@newtongreen.com']}
+							/>
+						</Section>
+					)}
 
 					{!isPrint && (
 						<>
