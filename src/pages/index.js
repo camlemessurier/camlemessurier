@@ -4,6 +4,7 @@ import {
 	Flex,
 	Text,
 	useColorMode,
+	useMediaQuery,
 	Wrap,
 	WrapItem,
 } from '@chakra-ui/react';
@@ -18,6 +19,14 @@ import { Sidebar } from '../components/Sidebar';
 
 const Index = () => {
 	const { colorMode } = useColorMode();
+	const [isPrint] = useMediaQuery(['print']);
+	const [fadeIn, setFadeIn] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setFadeIn(true);
+		}, 500);
+	}, []);
 
 	const bgColor = { light: 'white', dark: 'green.900' };
 
@@ -28,18 +37,10 @@ const Index = () => {
 
 	const labelCol = { light: 'green.700', dark: 'gray.100' };
 
-	const [fadeIn, setFadeIn] = useState(false);
-
 	const variants = {
 		visible: { opacity: 1 },
 		hidden: { opacity: 0 },
 	};
-
-	useEffect(() => {
-		setTimeout(() => {
-			setFadeIn(true);
-		}, 500);
-	}, []);
 
 	return (
 		<Flex
@@ -81,6 +82,7 @@ const Index = () => {
 					content='CgF_CClTUWgVQjHKNXKlfbJ34Ktz1OBfbn8R3nwJ_p8'
 				/>
 			</Head>
+
 			<Sidebar />
 			<motion.div
 				animate={!fadeIn ? 'hidden' : 'visible'}
@@ -89,8 +91,13 @@ const Index = () => {
 				initial={false}
 			>
 				<Container>
-					<Box pos='sticky' pt={35} top={0} bgColor={bgColor[colorMode]}>
-						<Hero title='Hello, welcome to my resume' mb={2} />
+					<Box
+						pos={isPrint ? 'relative' : 'sticky'}
+						pt={{ base: 0, md: 35 }}
+						top={0}
+						bgColor={bgColor[colorMode]}
+					>
+						<Hero title='Hello, welcome to my resume' my={2} />
 						<motion.div
 							animate={{ width: 300 }}
 							transition={{ delay: 0.5, duration: 1 }}
@@ -187,100 +194,104 @@ const Index = () => {
 						/>
 					</Section>
 
-					<Section heading='Skills'>
-						<Wrap mb={10}>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									Typescript
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									React
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									Next
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									Express
-								</Badge>
-							</WrapItem>
+					{!isPrint && (
+						<>
+							<Section heading='Skills'>
+								<Wrap mb={10}>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											Typescript
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											React
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											Next
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											Express
+										</Badge>
+									</WrapItem>
 
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									SQL
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									Docker
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									Git
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									R
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									Tensorflow
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									Go
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									CI/CD
-								</Badge>
-							</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											SQL
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											Docker
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											Git
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											R
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											Tensorflow
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											Go
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											CI/CD
+										</Badge>
+									</WrapItem>
 
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									VSCode
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									Azure
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									REST
-								</Badge>
-							</WrapItem>
-							<WrapItem>
-								<Badge size='lg' color={labelCol[colorMode]}>
-									GraphQL
-								</Badge>
-							</WrapItem>
-						</Wrap>
-					</Section>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											VSCode
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											Azure
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											REST
+										</Badge>
+									</WrapItem>
+									<WrapItem>
+										<Badge size='lg' color={labelCol[colorMode]}>
+											GraphQL
+										</Badge>
+									</WrapItem>
+								</Wrap>
+							</Section>
 
-					<Box
-						borderLeft='7px solid'
-						borderLeftColor={labelCol[colorMode]}
-						p={3}
-						my={5}
-						color={tipColor[colorMode]}
-						bg={tipBgColor[colorMode]}
-					>
-						<Text fontWeight='500'>
-							To toggle colour scheme, click on the "CL" icon
-						</Text>
-					</Box>
+							<Box
+								borderLeft='7px solid'
+								borderLeftColor={labelCol[colorMode]}
+								p={3}
+								my={5}
+								color={tipColor[colorMode]}
+								bg={tipBgColor[colorMode]}
+							>
+								<Text fontWeight='500'>
+									To toggle colour scheme, click on the "CL" icon
+								</Text>
+							</Box>
+						</>
+					)}
 				</Container>
 			</motion.div>
 		</Flex>

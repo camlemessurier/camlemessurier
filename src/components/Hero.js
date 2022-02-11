@@ -1,4 +1,4 @@
-import { Flex, Heading, useColorMode } from '@chakra-ui/react';
+import { Heading, useColorMode } from '@chakra-ui/react';
 
 export const Hero = ({ title, ...props }) => {
 	const { colorMode } = useColorMode();

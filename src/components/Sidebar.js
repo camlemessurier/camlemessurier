@@ -9,12 +9,16 @@ import {
 	ListItem,
 	Text,
 	useColorMode,
+	useMediaQuery,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { SiLinkedin } from 'react-icons/si';
 import { TiLocationArrow, TiMail, TiPhone } from 'react-icons/ti';
-import { VscGithubInverted, VscTwitter } from 'react-icons/vsc';
+import { VscGithubInverted } from 'react-icons/vsc';
 
 export const Sidebar = (props) => {
+	const [isPrint] = useMediaQuery(['print']);
+
 	const bgColor = { light: 'green.800', dark: 'gray.50' };
 
 	const color = { light: 'gray.50', dark: 'green.800' };
@@ -56,28 +60,30 @@ export const Sidebar = (props) => {
 						flexDirection='column'
 						mb='3vw'
 					>
-						<motion.button
-							whileHover={{ scale: 1.1 }}
-							whileTap={{ scale: 0.9 }}
-						>
-							<Flex
-								borderRadius={4000}
-								bgColor={color[colorMode]}
-								color={bgColor[colorMode]}
-								justifyContent='center'
-								alignItems='center'
-								h='5vw'
-								w='5vw'
-								mb='2vw'
-								onClick={toggleColorMode}
-								cursor='pointer'
-								shadow='md'
+						{!isPrint && (
+							<motion.button
+								whileHover={{ scale: 1.1 }}
+								whileTap={{ scale: 0.9 }}
 							>
-								<Text fontWeight='600' fontSize='2vw'>
-									CL
-								</Text>
-							</Flex>
-						</motion.button>
+								<Flex
+									borderRadius={4000}
+									bgColor={color[colorMode]}
+									color={bgColor[colorMode]}
+									justifyContent='center'
+									alignItems='center'
+									h='5vw'
+									w='5vw'
+									mb='2vw'
+									onClick={toggleColorMode}
+									cursor='pointer'
+									shadow='md'
+								>
+									<Text fontWeight='600' fontSize='2vw'>
+										CL
+									</Text>
+								</Flex>
+							</motion.button>
+						)}
 						<Text fontSize={30} fontWeight='600' mb={4} textAlign='center'>
 							Cam Le Messurier
 						</Text>
@@ -105,30 +111,52 @@ export const Sidebar = (props) => {
 									camlemessurier@gmail.com
 								</Link>
 							</ListItem>
+							{isPrint && (
+								<>
+									<ListItem>
+										<Link href='https://github.com/camlemessurier' isExternal>
+											<ListIcon as={VscGithubInverted} />
+											github.com/camlemessurier
+										</Link>
+									</ListItem>
+
+									{/* <ListItem>
+										<Link
+											href='https://www.linkedin.com/in/camlemessurier/'
+											isExternal
+										>
+											<ListIcon as={SiLinkedin} />
+											linkedin.com/in/camlemessurier/
+										</Link>
+									</ListItem> */}
+								</>
+							)}
 						</List>
 					</Box>
 				</Box>
 
-				<Box mt={7}>
-					<HStack spacing={30}>
-						<Link
-							href='https://github.com/camlemessurier'
-							alt='Github'
-							aria-label='Github'
-							isExternal
-						>
-							<Icon as={VscGithubInverted} w={10} h={10} />
-						</Link>
-						<Link
-							href='https://twitter.com/camlemessurier'
-							alt='Twitter'
-							aria-label='Twitter'
-							isExternal
-						>
-							<Icon as={VscTwitter} w={10} h={10} />
-						</Link>
-					</HStack>
-				</Box>
+				{!isPrint && (
+					<Box mt={7}>
+						<HStack spacing={30}>
+							<Link
+								href='https://github.com/camlemessurier'
+								alt='Github'
+								aria-label='Github'
+								isExternal
+							>
+								<Icon as={VscGithubInverted} w={10} h={10} />
+							</Link>
+							<Link
+								href='https://www.linkedin.com/in/camlemessurier/'
+								alt='LinkedIn'
+								aria-label='LinkedIn'
+								isExternal
+							>
+								<Icon as={SiLinkedin} w={9} h={9} />
+							</Link>
+						</HStack>
+					</Box>
+				)}
 			</Flex>
 		</motion.div>
 	);
