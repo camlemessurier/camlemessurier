@@ -309,7 +309,7 @@ const Index = () => {
 								bg={tipBgColor[colorMode]}
 							>
 								<Text fontWeight='500'>
-									To toggle colour scheme, click on the "CL" icon
+									To toggle colour scheme, click on the &quot;CL&quot; icon
 								</Text>
 							</Box>
 						</>
