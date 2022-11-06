@@ -1,6 +1,9 @@
-import { Heading, useColorMode } from '@chakra-ui/react';
+import { Heading, HeadingProps, useColorMode } from '@chakra-ui/react';
 
-export const Hero = ({ title, ...props }) => {
+export const Hero = ({
+	title = 'Hello, Welcome to my resume',
+	...props
+}: { title: string } & HeadingProps) => {
 	const { colorMode } = useColorMode();
 
 	const color = { light: 'gray.700', dark: 'white' };
@@ -14,8 +17,4 @@ export const Hero = ({ title, ...props }) => {
 			{title}
 		</Heading>
 	);
-};
-
-Hero.defaultProps = {
-	title: 'Hello, Welcome to my resume',
 };

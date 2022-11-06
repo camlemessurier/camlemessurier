@@ -33,11 +33,15 @@ const theme = extendTheme({
 				fontSize: '16px',
 			},
 		},
+		List: {
+			baseStyle: {
+				stylePosition: 'outside',
+			},
+		},
 	},
 	icons: {
 		logo: {
-			path: (
-				<svg
+			path: `<svg
 					width='3000'
 					height='3163'
 					viewBox='0 0 3000 3163'
@@ -49,8 +53,7 @@ const theme = extendTheme({
 						d='M1470.89 1448.81L2170 2488.19H820V706.392H2170L1470.89 1448.81ZM1408.21 1515.37L909.196 2045.3V2393.46H1998.84L1408.21 1515.37Z'
 						fill='currentColor'
 					/>
-				</svg>
-			),
+				</svg>`,
 			viewBox: '0 0 3000 3163',
 		},
 	},

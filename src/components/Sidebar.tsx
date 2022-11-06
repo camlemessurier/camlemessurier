@@ -12,11 +12,11 @@ import {
 	useMediaQuery,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { MdOutlineMailOutline } from 'react-icons/md';
 import { SiLinkedin } from 'react-icons/si';
-import { TiLocationArrow, TiMail, TiPhone } from 'react-icons/ti';
+import { TiPhone } from 'react-icons/ti';
 import { VscGithubInverted } from 'react-icons/vsc';
-
-export const Sidebar = (props) => {
+export const Sidebar = () => {
 	const [isPrint] = useMediaQuery(['print']);
 
 	const bgColor = { light: 'green.800', dark: 'gray.50' };
@@ -87,16 +87,11 @@ export const Sidebar = (props) => {
 							Cam Le Messurier
 						</Text>
 						<Box mb={4} h={0.5} w={100} bg={color[colorMode]} />
-						<Text fontSize={20}>Junior Developer</Text>
+						<Text fontSize={20}>Software Engineer</Text>
 					</Flex>
 
 					<Box fontWeight='500'>
 						<List>
-							<ListItem>
-								<ListIcon as={TiLocationArrow} />
-								Newcastle, Australia
-							</ListItem>
-
 							<ListItem>
 								<Link href='tel:0423886255' isExternal>
 									<ListIcon as={TiPhone} />
@@ -106,7 +101,7 @@ export const Sidebar = (props) => {
 
 							<ListItem>
 								<Link href='mailto:camlemessurier@gmail.com' isExternal>
-									<ListIcon as={TiMail} />
+									<ListIcon as={MdOutlineMailOutline} />
 									camlemessurier@gmail.com
 								</Link>
 							</ListItem>
@@ -139,7 +134,6 @@ export const Sidebar = (props) => {
 						<HStack spacing={30}>
 							<Link
 								href='https://github.com/camlemessurier'
-								alt='Github'
 								aria-label='Github'
 								isExternal
 							>
@@ -147,7 +141,6 @@ export const Sidebar = (props) => {
 							</Link>
 							<Link
 								href='https://www.linkedin.com/in/camlemessurier/'
-								alt='LinkedIn'
 								aria-label='LinkedIn'
 								isExternal
 							>

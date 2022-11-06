@@ -1,6 +1,12 @@
 import { Box, Heading } from '@chakra-ui/react';
 
-export const Section = ({ heading, children }) => {
+export const ContentSection = ({
+	heading,
+	children,
+}: {
+	heading: string;
+	children: React.ReactNode;
+}) => {
 	return (
 		<Box mb={18}>
 			<Heading pb={8}>{heading}</Heading>
