@@ -1,13 +1,4 @@
-import {
-	Badge,
-	Box,
-	Flex,
-	Text,
-	useColorMode,
-	useMediaQuery,
-	Wrap,
-	WrapItem,
-} from '@chakra-ui/react';
+import { Box, Flex, Text, useColorMode, useMediaQuery } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { Container } from '../components/Container';
@@ -142,18 +133,6 @@ const Index = () => {
 
 					{!isPrint && (
 						<>
-							<ContentSection heading='Skills'>
-								<Wrap mb={10}>
-									{resumeContent.tags.map((tag) => (
-										<WrapItem key={tag}>
-											<Badge size='lg' color={labelCol[colorMode]}>
-												{tag}
-											</Badge>
-										</WrapItem>
-									))}
-								</Wrap>
-							</ContentSection>
-
 							<Box
 								borderLeft='7px solid'
 								borderLeftColor={labelCol[colorMode]}
