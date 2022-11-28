@@ -7,36 +7,44 @@ export const resumeContent = {
 			title: 'Software Engineer, Greater Bank, Newcastle',
 			timeText: 'April 2022 - PRESENT',
 			listItem: [
-				'Full stack developer working on a new online banking solution for Greater Bank',
+				'Full stack developer working on a new online banking solution',
 				'Responsible for feature development, testing and delivery',
-				'Primary technologies included Kubernetes, Helm, Spring, Kotlin, Angular, Typescript, Testcafe, Jest, GCP, OpenAPI, Gitlab CI',
+				'Primary technologies included Kubernetes, Helm, Spring, Kotlin, Angular, Typescript, Testcafe, Jest, Google Cloud Platform (GKE), OpenAPI, Gitlab CI',
 			],
 		},
 		{
 			title: 'Software Engineer, BodyMindLife Online, Newcastle',
 			timeText: 'OCTOBER 2021 - April 2022',
 			listItem: [
-				'Front end web developer collaborating on design, planning, implementation and automated testing of the BML Online Platform ',
-				'Worked as part of an agile team; sprints, backlog refinement and retrospectives',
-				'Primary technologies included Next, Typescript, Apollo Client, Contentful, Tailwind, Cypress, Jest, Github Actions, GCP',
+				'Full stack web developer collaborating on design, planning, implementation and automated testing of the BML Online Platform ',
+				'Primary technologies included Typescript, Go, Next, Apollo Client, Contentful, Tailwind, Cypress, Jest, Github Actions, Google Cloud Platform (App Engine)',
 			],
 		},
 		{
-			title: 'Software Engineer, Newton Green Technologies, Newcastle',
+			title: 'Junior Software Engineer, Newton Green Technologies, Newcastle',
 			timeText: 'FEBRUARY 2021 - SEPTEMBER 2021',
 			listItem: [
 				'Full stack web developer responsible for end-to-end web app development',
-				'As a contractor, I worked on a wide range of projects, including Whistle (Lyrical Care), FeralScan, Breast Cancer Trials, ANZUP, TROG and others',
-				'Primary technologies included Laravel, .NET, React and Wordpress',
+				'Worked on a wide range of projects, including Whistle (Lyrical Care), FeralScan, Breast Cancer Trials, ANZUP, TROG and others',
+				'Primary technologies included Laravel, .NET, Service Stack, and Azure',
+			],
+		},
+		{
+			title: 'Intern, Userlot, Newcastle',
+			timeText: 'FEBRUARY 2021 - SEPTEMBER 2021',
+			listItem: [
+				'Completed Work Integrated Learning (WIL) project with local startup venture Userlot',
+				'Project included development of an embeddable third part widget to collect Net Promoter Scores (NPS) from customers and integration with the Userlot dashboard ',
+				'React, Apollo Client, GraphQL, Preact, Webpack, Ruby on Rails, Sidekiq',
 			],
 		},
 		{
 			title:
-				'Junior Developer / Acoustic Technician, Global Acoustics, Thornton',
+				'Junior Developer / Acoustic Technician, Global Acoustics, Newcastle',
 			timeText: 'JULY 2019 - FEBRUARY 2021',
 			listItem: [
-				'Designed and implemented a full stack safety management tool (GA Forms), to transition the business from the existing paper system',
-				'Technologies used include Next, Express, GraphQl, OAuth, Docker, NGINX, TypeORM, Chakra UI, and Gitlab',
+				'Designed and implemented a full stack safety management tracker to ensure compliance with safety regulations',
+				'Technologies used include Next, Express, GraphQl, OAuth, Docker Compose, NGINX, TypeORM, Chakra UI, Redis and Gitlab',
 				'Conducted sound power and environmental noise monitoring tests in accordance with relevant noise standards and criteria',
 				'Report writing',
 			],
@@ -49,7 +57,6 @@ export const resumeContent = {
 			listItems: [
 				'Advanced databases, algorithms, system and network security, web development, predictive analytics, operating systems and human computer interaction, linear algebra, statistical inference, machine learning, systems thinking ',
 				'Dr Robert M Sheahan Memorial Scholarship',
-				'Work Integrated Learning project at startup venture FinishBy4 - Preact, Apollo, Webpack, Ruby on Rails',
 			],
 		},
 		{

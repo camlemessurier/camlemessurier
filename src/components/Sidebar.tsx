@@ -83,11 +83,10 @@ export const Sidebar = () => {
 							</Flex>
 						</motion.button>
 
-						<Text fontSize={30} fontWeight='600' mb={4} textAlign='center'>
+						<Text fontSize={30} fontWeight='600' mb={2} textAlign='center'>
 							Cam Le Messurier
 						</Text>
-						<Box mb={4} h={0.5} w={100} bg={color[colorMode]} />
-						<Text fontSize={20}>Software Engineer</Text>
+						<Text fontSize={18}>Software Engineer</Text>
 					</Flex>
 
 					<Box fontWeight='500'>
