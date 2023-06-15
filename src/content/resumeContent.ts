@@ -61,6 +61,7 @@ export const resumeContent = {
 		},
 		{
 			title: "High School Certificate, Taree High School",
+			listItems: [],
 		},
 	],
 	tags: [
