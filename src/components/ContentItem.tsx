@@ -41,6 +41,7 @@ export const ContentItem = ({
 				borderLeft='7px solid'
 				borderLeftColor={iconColor[colorMode]}
 				bg={cardColor[colorMode]}
+				sx={{ pageBreakInside: "avoid" }}
 			>
 				<Heading size='md'>{title}</Heading>
 				{timePeriod && (
