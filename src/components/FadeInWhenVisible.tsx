@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import React from "react";
 
 export const FadeInWhenVisible = ({
 	children,
@@ -8,14 +8,10 @@ export const FadeInWhenVisible = ({
 }) => {
 	return (
 		<motion.div
-			initial='hidden'
-			whileInView='visible'
-			viewport={{ once: true }}
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1 }}
-			variants={{
-				visible: { opacity: 1 },
-				hidden: { opacity: 0 },
-			}}
+			viewport={{ once: true }}
 		>
 			{children}
 		</motion.div>

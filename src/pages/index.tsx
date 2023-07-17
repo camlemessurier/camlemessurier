@@ -1,27 +1,35 @@
-import { Box, Flex, Text, useColorMode, useMediaQuery } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import { Container } from '../components/Container';
-import { ContentItem } from '../components/ContentItem';
-import { ContentSection } from '../components/ContentSection';
-import { Hero } from '../components/Hero';
-import { Sidebar } from '../components/Sidebar';
-import { resumeContent } from '../content/resumeContent';
-import { useFadeIn } from '../hooks/useFadeIn';
+import {
+	Box,
+	Flex,
+	Heading,
+	Text,
+	VisuallyHidden,
+	useColorMode,
+	useMediaQuery,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import Head from "next/head";
+import { Container } from "../components/Container";
+import { ContentItem } from "../components/ContentItem";
+import { ContentSection } from "../components/ContentSection";
+import { Hero } from "../components/Hero";
+import { Sidebar } from "../components/Sidebar";
+import { resumeContent } from "../content/resumeContent";
+import { useFadeIn } from "../hooks/useFadeIn";
 
 const Index = () => {
 	const { colorMode } = useColorMode();
-	const [isPrint] = useMediaQuery(['print']);
+	const [isPrint] = useMediaQuery(["print"]);
 	const [fadeIn] = useFadeIn({ fadeInMilliseconds: 500 });
 
-	const bgColor = { light: 'white', dark: 'green.900' };
+	const bgColor = { light: "white", dark: "green.900" };
 
-	const color = { light: 'gray.700', dark: 'gray.100' };
+	const color = { light: "gray.700", dark: "gray.100" };
 
-	const tipColor = { light: 'gray.700', dark: 'gray.200' };
-	const tipBgColor = { light: 'gray.100', dark: '' };
+	const tipColor = { light: "gray.700", dark: "gray.200" };
+	const tipBgColor = { light: "gray.100", dark: "" };
 
-	const labelCol = { light: 'green.700', dark: 'gray.100' };
+	const labelCol = { light: "green.700", dark: "gray.100" };
 
 	const variants = {
 		visible: { opacity: 1 },
@@ -33,7 +41,7 @@ const Index = () => {
 			bgColor={bgColor[colorMode]}
 			color={color[colorMode]}
 			p='2vw'
-			flexDirection={{ base: 'column', md: 'row' }}
+			flexDirection={{ base: "column", md: "row" }}
 		>
 			<Head>
 				<title>Cam Le Messurier</title>
@@ -71,82 +79,66 @@ const Index = () => {
 
 			<Sidebar />
 			<motion.div
-				animate={!fadeIn ? 'hidden' : 'visible'}
+				animate={!fadeIn ? "hidden" : "visible"}
 				transition={{ duration: 0.5 }}
 				variants={variants}
 				initial={false}
 			>
 				<Container>
 					<Box
-						pos={isPrint ? 'relative' : 'sticky'}
+						pos={isPrint ? "relative" : "sticky"}
 						pt={{ base: 0, md: 35 }}
 						top={0}
 						bgColor={bgColor[colorMode]}
 					>
 						<Hero title={resumeContent.heading} my={2} />
+						<VisuallyHidden>
+							<Heading>Cam Le Messurier</Heading>
+						</VisuallyHidden>
 						<motion.div
 							animate={{ width: 300 }}
 							transition={{ delay: 0.5, duration: 1 }}
-							style={{ width: '0px' }}
+							style={{ width: "0px" }}
 						>
 							<Box p={1} bg='green.700' mb={8} />
 						</motion.div>
 					</Box>
 
-					<Text mb={8} mt={2}>
+					<Text
+						mb={12}
+						mt={2}
+						sx={{
+							pageBreakAfter: "always",
+						}}
+					>
 						{resumeContent.mainText}
 					</Text>
 
-					{isPrint && <Box h={370}></Box>}
 					<ContentSection heading='Employment'>
-						{resumeContent.employment.map(({ title, timeText, listItem }) => (
+						{resumeContent.employment.map(
+							({ title, timeText, acheivements, technologies, blurb }) => (
+								<ContentItem
+									key={title}
+									title={title}
+									blurb={blurb}
+									timePeriod={timeText}
+									achievements={acheivements}
+									technologies={technologies}
+								/>
+							)
+						)}
+					</ContentSection>
+
+					<ContentSection heading='Education'>
+						{resumeContent.education.map(({ title, acheivements, blurb }) => (
 							<ContentItem
 								key={title}
 								title={title}
-								timePeriod={timeText}
-								listItems={listItem}
+								achievements={acheivements}
+								blurb={blurb}
 							/>
 						))}
 					</ContentSection>
-
-					{isPrint && <Box h={220}></Box>}
-					<ContentSection heading='Education'>
-						{resumeContent.education.map(({ title, listItems }) => (
-							<ContentItem key={title} title={title} listItems={listItems} />
-						))}
-					</ContentSection>
-
-					{isPrint && (
-						<ContentSection heading='References'>
-							{resumeContent.references.map(
-								({ timePeriod, title, listItems }) => (
-									<ContentItem
-										key={title}
-										title={title}
-										timePeriod={timePeriod}
-										listItems={listItems}
-									/>
-								)
-							)}
-						</ContentSection>
-					)}
-
-					{!isPrint && (
-						<>
-							<Box
-								borderLeft='7px solid'
-								borderLeftColor={labelCol[colorMode]}
-								p={3}
-								my={5}
-								color={tipColor[colorMode]}
-								bg={tipBgColor[colorMode]}
-							>
-								<Text fontWeight='500'>
-									To toggle colour scheme, click on the &quot;CL&quot; icon
-								</Text>
-							</Box>
-						</>
-					)}
 				</Container>
 			</motion.div>
 		</Flex>
