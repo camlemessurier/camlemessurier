@@ -9,6 +9,7 @@ import {
 	Tag,
 	Text,
 	Wrap,
+	WrapItem,
 	useColorMode,
 } from "@chakra-ui/react";
 import { FadeInWhenVisible } from "./FadeInWhenVisible";
@@ -43,7 +44,9 @@ export const ContentItem = ({
 				bg={cardColor[colorMode]}
 				sx={{ pageBreakInside: "avoid" }}
 			>
-				<Heading size='md'>{title}</Heading>
+				<Heading size='md' as={"h3"}>
+					{title}
+				</Heading>
 				{timePeriod && (
 					<Text
 						fontWeight='600'
@@ -87,7 +90,9 @@ export const ContentItem = ({
 							<SubHeading>Technologies</SubHeading>
 							<Wrap>
 								{technologies?.map((li) => (
-									<Tag key={li}>{li}</Tag>
+									<WrapItem key={li}>
+										<Tag>{li}</Tag>
+									</WrapItem>
 								))}
 							</Wrap>
 						</Box>
