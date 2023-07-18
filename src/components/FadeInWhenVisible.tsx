@@ -8,10 +8,14 @@ export const FadeInWhenVisible = ({
 }) => {
 	return (
 		<motion.div
-			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
-			transition={{ duration: 1 }}
+			initial='hidden'
+			whileInView='visible'
 			viewport={{ once: true }}
+			transition={{ duration: 1 }}
+			variants={{
+				visible: { opacity: 1 },
+				hidden: { opacity: 0 },
+			}}
 		>
 			{children}
 		</motion.div>
