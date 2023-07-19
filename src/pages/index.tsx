@@ -48,10 +48,7 @@ const Index = () => {
 
 				<meta charSet='utf-8' />
 				<meta name='viewport' content='initial-scale=1.0, width=device-width' />
-				<meta
-					name='description'
-					content='Junior Developer Resume for Cam Le Messurier.'
-				/>
+				<meta name='description' content='Resume for Cam Le Messurier.' />
 				<link
 					rel='apple-touch-icon'
 					sizes='180x180'
