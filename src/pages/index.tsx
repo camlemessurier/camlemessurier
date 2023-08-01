@@ -5,7 +5,6 @@ import {
 	Text,
 	VisuallyHidden,
 	useColorMode,
-	useMediaQuery,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Head from "next/head";
@@ -19,17 +18,11 @@ import { useFadeIn } from "../hooks/useFadeIn";
 
 const Index = () => {
 	const { colorMode } = useColorMode();
-	const [isPrint] = useMediaQuery(["print"]);
 	const [fadeIn] = useFadeIn({ fadeInMilliseconds: 500 });
 
 	const bgColor = { light: "white", dark: "green.900" };
 
 	const color = { light: "gray.700", dark: "gray.100" };
-
-	const tipColor = { light: "gray.700", dark: "gray.200" };
-	const tipBgColor = { light: "gray.100", dark: "" };
-
-	const labelCol = { light: "green.700", dark: "gray.100" };
 
 	const variants = {
 		visible: { opacity: 1 },
@@ -41,7 +34,7 @@ const Index = () => {
 			bgColor={bgColor[colorMode]}
 			color={color[colorMode]}
 			p='2vw'
-			flexDirection={{ base: "column", md: "row" }}
+			flexDirection={{ base: "column", lg: "row" }}
 		>
 			<Head>
 				<title>Cam Le Messurier</title>
@@ -83,10 +76,11 @@ const Index = () => {
 			>
 				<Container>
 					<Box
-						pos={isPrint ? "relative" : "sticky"}
-						pt={{ base: 0, md: 35 }}
+						pos={"sticky"}
+						pt={{ base: 0, lg: 35 }}
 						top={0}
 						bgColor={bgColor[colorMode]}
+						zIndex='100'
 					>
 						<Hero title={resumeContent.heading} my={2} />
 						<VisuallyHidden>

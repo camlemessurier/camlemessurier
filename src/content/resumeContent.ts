@@ -1,19 +1,18 @@
 export const resumeContent = {
 	heading: "Hello, welcome to my resume",
 	mainText:
-		"Collaborative team member with a passion for building quality systems and improving engineering capability. Strong advocate for process improvement and continually seek out opportunities to optimise development workflows, share knowledge, and support the team in any way I can. Loves a challenge and the odd rogue side mission.",
+		"Experienced full stack software engineer focused on building high quality digital solutions. Strong advocate for process improvement and continually seeks out opportunities to improve development workflows, share knowledge, and support the team in any way I can. Loves a challenge and the odd rogue side mission.",
 	employment: [
 		{
 			title: "Software Engineer, Greater Bank, Newcastle",
 			timeText: "April 2022 - PRESENT",
 			blurb:
-				"Worked within cross-disciplinary team (UX, architects, engineers, managers, etc.) to develop a digital banking solution for over 300,000 customers; 15+ backend micro-services, 3+ frontends, and 5+ teams. Responsible for end-to-end feature delivery, specialising in web, backend, and CI/CD pipelines.",
+				"Worked within cross-disciplinary team to develop a digital banking solution for over 300,000 customers; 15+ backend micro-services, 3+ frontends, and 5+ teams. Responsible for end-to-end feature delivery, specialising in web, backend, and CI/CD pipelines.",
 			acheivements: [
-				"Planned, implemented, communicated, and documented advanced multi-repo release and regression testing processes across the entire digital banking solution",
+				"Planned, implemented, and communicated advanced multi-repo release and regression testing process across the entire digital banking solution",
 				"Pioneered shared CI/CD configuration across micro-services to enhance release, testing, quality, and compliance processes",
 				"Actioned automated dependency management solution for 30+ repositories to meet strict security requirements",
 				"Heavily involved in performance testing and optimisation of the system, leading to considerable increases in application stability and a significant reduction of API response times (over 50%)",
-				"Assisted with a complex A/B IAM infrastructure migration",
 			],
 			technologies: [
 				"Kubernetes",
@@ -121,18 +120,5 @@ export const resumeContent = {
 				"Qualified with Distinction",
 			],
 		},
-	],
-	tags: [
-		"Typescript",
-		" React",
-		" Next",
-		" Express",
-		" Docker",
-		" Git",
-		" Kubernetes",
-		" Go",
-		" CI/CD",
-		" REST",
-		" GraphQL",
 	],
 };
