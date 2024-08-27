@@ -95,25 +95,29 @@ const Index = () => {
 						</motion.div>
 					</Box>
 
-					<Text
-						mb={12}
-						mt={2}
-						sx={{
-							pageBreakAfter: "always",
-						}}
-					>
-						{resumeContent.mainText}
-					</Text>
+					<Box mb={6}>
+						{resumeContent.mainText.map(v => (
+							<Text
+								key={v}
+								mb={6}
+								mt={2}
+							>
+								{v}
+							</Text>
+						))}
+					</Box>
+
+
 
 					<ContentSection heading='Employment'>
 						{resumeContent.employment.map(
-							({ title, timeText, acheivements, technologies, blurb }) => (
+							({ title, timeText, achievements, technologies, blurb }) => (
 								<ContentItem
 									key={title}
 									title={title}
 									blurb={blurb}
 									timePeriod={timeText}
-									achievements={acheivements}
+									achievements={achievements}
 									technologies={technologies}
 								/>
 							)
@@ -121,11 +125,11 @@ const Index = () => {
 					</ContentSection>
 
 					<ContentSection heading='Education'>
-						{resumeContent.education.map(({ title, acheivements, blurb }) => (
+						{resumeContent.education.map(({ title, achievements, blurb }) => (
 							<ContentItem
 								key={title}
 								title={title}
-								achievements={acheivements}
+								achievements={achievements}
 								blurb={blurb}
 							/>
 						))}

@@ -1,18 +1,61 @@
-export const resumeContent = {
-	heading: "Hello, welcome to my resume",
-	mainText:
-		"Experienced full stack software engineer focused on building high quality digital solutions. Strong advocate for process improvement and continually seeks out opportunities to improve development workflows, share knowledge, and support the team in any way I can. Loves a challenge and the odd rogue side mission.",
+export type EmploymentContent = {
+	title: string,
+	timeText?: string,
+	blurb: string,
+	achievements?: string[],
+	technologies?: string[]
+}
+
+export type ResumeContent = {
+	heading: string,
+	mainText: string[],
+	employment: EmploymentContent[]
+	education: EmploymentContent[]
+}
+
+export const resumeContent: ResumeContent = {
+	heading: "Hi, welcome to my resume",
+	mainText: [
+		"My professional journey first started a couple of years ago, in the midst of my uni degree, when I stumbled upon a YouTube video titled \"How to build Facebook in under 16 hours.\" Fast forward to now, I’ve had the privilege of building software for a wide array of companies, from banks to startups to consultancies. I've collaborated on a wide array of challenging projects, both big and small, and worked with some exceptional teams and fantastic people.",
+		"I have strong skills in frontend, backend, testing, and DevOps; but also in teamwork, communication, and problem-solving. I have a bias for action, am always eager to contribute, and love helping the team ship first-class software."
+	],
+	
 	employment: [
 		{
-			title: "Software Engineer, Greater Bank, Newcastle",
-			timeText: "April 2022 - PRESENT",
+			title: "Software Engineer, Digizoo Services",
+			timeText: "October 2023 - PRESENT",
 			blurb:
-				"Worked within cross-disciplinary team to develop a digital banking solution for over 300,000 customers; 15+ backend micro-services, 3+ frontends, and 5+ teams. Responsible for end-to-end feature delivery, specialising in web, backend, and CI/CD pipelines.",
-			acheivements: [
-				"Planned, implemented, and communicated advanced multi-repo release and regression testing process across the entire digital banking solution",
-				"Pioneered shared CI/CD configuration across micro-services to enhance release, testing, quality, and compliance processes",
-				"Actioned automated dependency management solution for 30+ repositories to meet strict security requirements",
-				"Heavily involved in performance testing and optimisation of the system, leading to considerable increases in application stability and a significant reduction of API response times (over 50%)",
+				"As a consultant for Digizoo, I work primarily at ING where I'm helping build, design, and release real-time, high-volume data pipelines to power critical components within ING's current and future systems.",
+			achievements: [
+				"Design and implementation of data streaming systems - focusing on accuracy, validity, and performance at high loads.",
+				"Application of domain and event-driven architectural principles.",
+				"Productionisation of the system - from pipelines and infrastructure to observability and testing.",
+			],
+			technologies: [
+				"Kafka",
+				"KStreams",
+				"Kafka Connect",
+				"Avro",
+				"Spring",
+				"Java",
+				"SQL Server",
+				"Azure",
+				"Grafana",
+				"Prometheus",
+				"OTEL",
+				"Unix"
+			],
+		},
+		{
+			title: "Software Engineer, Greater Bank, Newcastle",
+			timeText: "April 2022 - October 2023",
+			blurb:
+				"As part of Greater Bank's digital transformation project, I helped build and deliver a modern, cloud-first digital banking platform from scratch; new frontends, new backends, new infrastructure, and new processes.",
+			achievements: [
+				"Helped design and implement a multi-repo release and regression strategy spanning the entire digital stack.",
+				"Designed and deployed shared CI/CD configuration across microservices to standardise and enforce release, testing, quality, and compliance processes.",
+				"Implemented an automated dependency management solution for 30+ repositories to meet strict security requirements.",
+				"Performed performance testing and fixed bottlenecks, leading to considerable increases in application stability and significant reduction in response times.",
 			],
 			technologies: [
 				"Kubernetes",
@@ -20,49 +63,48 @@ export const resumeContent = {
 				"Spring",
 				"Kotlin",
 				"Angular",
-				"Typescript",
-				"Testcafe",
+				"TypeScript",
+				"TestCafe",
 				"Jest",
-				"Google Cloud Platform (GKE)",
+				"GCP",
 				"OpenAPI",
-				"Gitlab CI",
+				"GitLab CI",
 			],
 		},
 		{
 			title: "Software Engineer, BodyMindLife Online, Newcastle",
-			timeText: "OCTOBER 2021 - April 2022",
+			timeText: "October 2021 - April 2022",
 			blurb:
-				"Worked as full stack developer within startup team to uplift and improve online yoga streaming platform. Primarily responsible for front end web development and testing automation.",
-			acheivements: [
-				"Helped collaborate with business on feature backlog to prioritise and design solutions",
-				"Helped automate and integrate end-to-end testing to CI/CD pipelines",
-				"Developed and deployed small authentication micro-service to connect multiple IAM providers",
-				"SEO uplift of web app",
-				"Significant front end UI/UX revamp",
+				"Working within a dynamic startup environment, I helped build and grow a new online yoga streaming platform.",
+			achievements: [
+				"Involved in all stages of feature development from inception to deployment.",
+				"Automated and integrated end-to-end testing via CI/CD pipelines.",
+				"Performed an SEO and accessibility audit and uplift.",
+				"Responsible for an authentication microservice gateway to connect multiple IAM providers.",
 			],
 			technologies: [
-				"NextJs",
+				"Next.js",
 				"React",
-				"Typescript",
+				"TypeScript",
 				"Apollo Client",
 				"Contentful",
 				"Tailwind",
 				"Cypress",
 				"Jest",
-				"Github Actions",
+				"GitHub Actions",
 				"Go",
 				"GCP",
 			],
 		},
 		{
 			title: "Junior Software Engineer, Newton Green Technologies, Newcastle",
-			timeText: "FEBRUARY 2021 - SEPTEMBER 2021",
+			timeText: "November 2020 - September 2021",
 			blurb:
-				"Worked as a full stack developer on a variety of projects for clients.",
-			acheivements: [
-				"Full stack development on communication platform for startup project in aged care",
-				"Full stack development on well established community pest management tracker",
-				"Front end development for various cancer research agencies",
+				"Worked on a variety of projects for clients such as:",
+			achievements: [
+				"Real-time communication platform for a startup serving aged care facilities.",
+				"Community pest management tracker.",
+				"Various cancer research agencies.",
 			],
 			technologies: [
 				"Laravel",
@@ -71,14 +113,14 @@ export const resumeContent = {
 				"Redis",
 				"Azure Pipelines",
 				"React",
-				"Wordpress",
+				"WordPress",
 			],
 		},
 		{
 			title: "Intern, Userlot, Newcastle",
-			timeText: "FEBRUARY 2021 - SEPTEMBER 2021",
+			timeText: "February 2021 - September 2021",
 			blurb:
-				"Built an embeddable third part widget to collect and analyse surveys from customers for local tech startup, as a part of UON's Work Integrated Learning (WIL) project",
+				"As part of UON's Work Integrated Learning (WIL) project, I built an embeddable third-party widget to collect surveys from customers and capture data in a dashboard for a local tech startup.",
 			technologies: [
 				"React",
 				"Apollo Client",
@@ -92,20 +134,20 @@ export const resumeContent = {
 		{
 			title:
 				"Junior Developer / Acoustic Technician, Global Acoustics, Newcastle",
-			timeText: "JULY 2019 - FEBRUARY 2021",
+			timeText: "July 2019 - November 2020",
 			blurb:
-				"Worked as on the ground tech, but also part time as developer. Solely responsible for delivery of a full stack safety management tracker used by techs everyday",
+				"Worked as a part-time developer / part-time technician. Solely responsible for delivery of a full-stack safety management tracker used by on-the-ground teams every day to log safety and compliance paperwork.",
 			technologies: [
-				"Next",
+				"Next.js",
 				"Express",
-				"GraphQl",
+				"GraphQL",
 				"OAuth",
 				"Docker Compose",
 				"NGINX",
 				"TypeORM",
 				"Chakra UI",
 				"Redis",
-				"Gitlab",
+				"GitLab",
 			],
 		},
 	],
@@ -114,10 +156,10 @@ export const resumeContent = {
 			title:
 				"Bachelor of Computer Science / Mathematics, University of Newcastle",
 			blurb:
-				"Courses included advanced databases, algorithms, system and network security, web development, predictive analytics, operating systems and human computer interaction, linear algebra, statistical inference, machine learning, systems thinking",
-			acheivements: [
-				"Dr Robert M Sheahan Memorial Scholarship",
-				"Qualified with Distinction",
+				"Studied topics including artificial intelligence, systems thinking, data science, machine learning, databases, algorithms, system and network security, web development, predictive analytics, operating systems, and human-computer interaction, linear algebra, statistical inference.",
+			achievements: [
+				"Recipient of the Dr. Robert M. Sheahan Memorial Scholarship.",
+				"Graduated with Distinction.",
 			],
 		},
 	],
