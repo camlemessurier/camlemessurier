@@ -1,17 +1,15 @@
 import {
-	Box,
 	Flex,
 	Heading,
 	Text,
 	VisuallyHidden,
-	useColorMode,
+	useColorMode
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import { Container } from "../components/Container";
 import { ContentItem } from "../components/ContentItem";
 import { ContentSection } from "../components/ContentSection";
-import { Hero } from "../components/Hero";
 import { Sidebar } from "../components/Sidebar";
 import { resumeContent } from "../content/resumeContent";
 import { useFadeIn } from "../hooks/useFadeIn";
@@ -75,27 +73,28 @@ const Index = () => {
 				initial={false}
 			>
 				<Container>
-					<Box
+					<VisuallyHidden>
+						<Heading>Cam Le Messurier</Heading>
+					</VisuallyHidden>
+					{/* <Box
 						pos={"sticky"}
 						pt={{ base: 0, lg: 35 }}
 						top={0}
 						bgColor={bgColor[colorMode]}
 						zIndex='100'
 					>
-						<Hero title={resumeContent.heading} my={2} />
-						<VisuallyHidden>
-							<Heading>Cam Le Messurier</Heading>
-						</VisuallyHidden>
-						<motion.div
+						{/* <Hero title={resumeContent.heading} my={2} /> */}
+
+					{/* <motion.div
 							animate={{ width: 300 }}
 							transition={{ delay: 0.5, duration: 1 }}
 							style={{ width: "0px" }}
 						>
 							<Box p={1} bg='green.700' mb={8} />
-						</motion.div>
-					</Box>
+						</motion.div> */}
+					{/* </Box> */}
 
-					<Box mb={6}>
+					<ContentSection heading="Summary">
 						{resumeContent.mainText.map(v => (
 							<Text
 								key={v}
@@ -105,7 +104,7 @@ const Index = () => {
 								{v}
 							</Text>
 						))}
-					</Box>
+					</ContentSection>
 
 
 
@@ -136,7 +135,7 @@ const Index = () => {
 					</ContentSection>
 				</Container>
 			</motion.div>
-		</Flex>
+		</Flex >
 	);
 };
 

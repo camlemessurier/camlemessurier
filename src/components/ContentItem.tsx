@@ -37,9 +37,9 @@ export const ContentItem = ({
 		<FadeInWhenVisible>
 			<Box
 				mb={12}
-				px={7}
+				px={0}
 				py={4}
-				borderLeft='7px solid'
+				// borderLeft='2px solid'
 				borderLeftColor={iconColor[colorMode]}
 				bg={cardColor[colorMode]}
 				sx={{ pageBreakInside: "avoid" }}
@@ -103,7 +103,7 @@ export const ContentItem = ({
 	);
 };
 
-const SubHeading = ({ children }: { children: React.ReactNode }) => {
+const SubHeading = ({ children }: { children: React.ReactNode; }) => {
 	const { colorMode } = useColorMode();
 
 	return (
