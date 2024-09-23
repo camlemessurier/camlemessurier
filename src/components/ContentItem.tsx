@@ -16,7 +16,7 @@ import { FadeInWhenVisible } from "./FadeInWhenVisible";
 
 const timePeriodColor = { light: "gray.700", dark: "grey.300" };
 const iconColor = { light: "green.700", dark: "grey.200" };
-const cardColor = { light: "white", dark: "rgba(0, 0, 0, 0.15)" };
+const cardColor = { light: "white", dark: "green.900" };
 
 export const ContentItem = ({
 	title,
