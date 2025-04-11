@@ -18,7 +18,7 @@ const Index = () => {
 	const { colorMode } = useColorMode();
 	const [fadeIn] = useFadeIn({ fadeInMilliseconds: 500 });
 
-	const bgColor = { light: "white", dark: "green.900" };
+	const bgColor = { light: "white", dark: "gray.800" };
 
 	const color = { light: "gray.700", dark: "gray.100" };
 
@@ -72,7 +72,7 @@ const Index = () => {
 				variants={variants}
 				initial={false}
 			>
-				<Container>
+				<Container mt={25}>
 					<VisuallyHidden>
 						<Heading>Cam Le Messurier</Heading>
 					</VisuallyHidden>
@@ -110,14 +110,15 @@ const Index = () => {
 
 					<ContentSection heading='Employment'>
 						{resumeContent.employment.map(
-							({ title, timeText, achievements, technologies, blurb }) => (
+							({ title, timeText, achievements, technologies, blurb, projects }) => (
 								<ContentItem
 									key={title}
 									title={title}
 									blurb={blurb}
-									timePeriod={timeText}
+									timeText={timeText}
 									achievements={achievements}
 									technologies={technologies}
+									projects={projects}
 								/>
 							)
 						)}

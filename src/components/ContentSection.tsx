@@ -8,12 +8,12 @@ export const ContentSection = ({
 	children: React.ReactNode;
 }) => {
 	return (
-		<Box mb={18}>
-			<Heading as='h2' size={"lg"} pb={8}>
+		<Box mb={12}>
+			<Heading as='h2' size={"lg"} pb={4}>
 				{heading}
 			</Heading>
 
 			{children}
-		</Box>
+		</Box >
 	);
 };

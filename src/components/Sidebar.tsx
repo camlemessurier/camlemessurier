@@ -12,15 +12,14 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { BsFileEarmarkTextFill } from "react-icons/bs";
-import { MdOutlineMailOutline } from "react-icons/md";
 import { SiLinkedin } from "react-icons/si";
 import { TiPhone } from "react-icons/ti";
 import { VscGithubInverted } from "react-icons/vsc";
 
 export const Sidebar = () => {
-	const bgColor = { light: "green.800", dark: "gray.50" };
+	const bgColor = { light: "gray.700", dark: "gray.50" };
 
-	const color = { light: "gray.50", dark: "green.800" };
+	const color = { light: "gray.50", dark: "gray.800" };
 
 	const variants = {
 		visible: { x: 0 },
@@ -95,12 +94,7 @@ export const Sidebar = () => {
 								</Link>
 							</ListItem>
 
-							<ListItem>
-								<Link href='mailto:camlemessurier@gmail.com' isExternal>
-									<ListIcon as={MdOutlineMailOutline} />
-									camlemessurier@gmail.com
-								</Link>
-							</ListItem>
+
 						</List>
 					</Box>
 				</Flex>
