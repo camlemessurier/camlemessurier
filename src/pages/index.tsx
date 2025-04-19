@@ -16,7 +16,7 @@ import { useFadeIn } from "../hooks/useFadeIn";
 
 const Index = () => {
 	const { colorMode } = useColorMode();
-	const [fadeIn] = useFadeIn({ fadeInMilliseconds: 500 });
+	const [fadeIn] = useFadeIn({ fadeInMilliseconds: 1 });
 
 	const bgColor = { light: "white", dark: "gray.800" };
 
@@ -68,7 +68,7 @@ const Index = () => {
 			<Sidebar />
 			<motion.div
 				animate={!fadeIn ? "hidden" : "visible"}
-				transition={{ duration: 0.5 }}
+				transition={{ duration: 0.2 }}
 				variants={variants}
 				initial={false}
 			>
