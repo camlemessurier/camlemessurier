@@ -21,8 +21,8 @@ export interface ResumeContent {
 export const resumeContent: ResumeContent = {
   heading: "Hi, welcome to my resume",
   mainText: [
-    "Over the past 5 years, I’ve had the privilege of building software for a wide array of companies, from banks to startups to consultancies. I've collaborated on a wide array of challenging projects, both big and small, and worked with some exceptional teams and fantastic people.",
-    "I have strong technical skills across the full software development and devops stack; but also in teamwork, communication, and problem-solving. I have a bias for action, am always eager to contribute, and love helping the team ship first-class software.",
+    "I’m a full-stack engineer with 5+ years of experience building software for everything from nimble startups to large banks and consultancies. Adept across the full development stack, with deep expertise in backend, frontend, DevOps, and systems architecture.",
+    "I’m big on clear communication, team collaboration, and mentoring, and I love applying systems thinking to help teams ship great software faster. Whether I’m hands-on coding or guiding a team through complex decisions, I aim to raise the bar and keep things moving forward.",
   ],
 
   employment: [
