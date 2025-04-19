@@ -19,6 +19,7 @@ const timePeriodColor = { light: "gray.700", dark: "grey.300" };
 const highlight = { light: "gray.600", dark: "grey.300" };
 const iconColor = { light: "gray.700", dark: "grey.200" };
 const cardColor = { light: "white", dark: "gray.800" };
+const tagColor = { light: "gray.200", dark: "gray.400" };
 
 export const ContentItem = ({ title, achievements, blurb, projects, technologies, timeText }: EmploymentContent) => {
 	const { colorMode } = useColorMode();
@@ -30,7 +31,6 @@ export const ContentItem = ({ title, achievements, blurb, projects, technologies
 				px={0}
 				pt={4}
 				pb={10}
-				// borderLeft='2px solid'
 				borderLeftColor={iconColor[colorMode]}
 				bg={cardColor[colorMode]}
 				sx={{ pageBreakInside: "avoid" }}
@@ -89,11 +89,11 @@ export const ContentItem = ({ title, achievements, blurb, projects, technologies
 
 											{
 												project.technologies && (
-													<Box mt={4}>
+													<Box mt={4} >
 														<Wrap>
 															{project.technologies?.map((li) => (
 																<WrapItem key={li}>
-																	<Tag>{li}</Tag>
+																	<Tag color={iconColor.light} backgroundColor={tagColor[colorMode]}>{li}</Tag>
 																</WrapItem>
 															))}
 														</Wrap>

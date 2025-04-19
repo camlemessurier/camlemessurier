@@ -22,7 +22,7 @@ export const resumeContent: ResumeContent = {
   heading: "Hi, welcome to my resume",
   mainText: [
     "Over the past 5 years, I’ve had the privilege of building software for a wide array of companies, from banks to startups to consultancies. I've collaborated on a wide array of challenging projects, both big and small, and worked with some exceptional teams and fantastic people.",
-    "I have strong techical skills across the full software development and devops stack; but also in teamwork, communication, and problem-solving. I have a bias for action, am always eager to contribute, and love helping the team ship first-class software.",
+    "I have strong technical skills across the full software development and devops stack; but also in teamwork, communication, and problem-solving. I have a bias for action, am always eager to contribute, and love helping the team ship first-class software.",
   ],
 
   employment: [
@@ -112,7 +112,7 @@ export const resumeContent: ResumeContent = {
 
     {
       title: "Intern, Userlot, Newcastle",
-      timeText: "February 2021 - September 2021",
+      timeText: "February 2021 - October 2021",
       blurb:
         "As part of UON's Work Integrated Learning (WIL) project, I built an embeddable third-party widget to collect surveys from customers and capture data in a dashboard for a local tech startup.",
       technologies: [
@@ -127,7 +127,7 @@ export const resumeContent: ResumeContent = {
     },
     {
       title: "Junior Software Engineer, Newton Green Technologies, Newcastle",
-      timeText: "November 2020 - September 2021",
+      timeText: "November 2020 - October 2021",
       projects: [
         {
           blurb: "Real-time aged care communication platform",
