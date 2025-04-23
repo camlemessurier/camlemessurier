@@ -89,7 +89,7 @@ export const resumeContent: ResumeContent = {
       title: "Software Engineer, BodyMindLife Online, Newcastle",
       timeText: "October 2021 - April 2022",
       blurb:
-        "Working within a dynamic startup environment, I helped build and run an online yoga streaming platform.",
+        "Worked with startup team to build and grow new online yoga streaming platform.",
       achievements: [
         "Involved in all stages of feature development from inception to deployment.",
         "Automated and integrated end-to-end testing via CI/CD pipelines.",
