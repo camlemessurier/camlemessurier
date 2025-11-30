@@ -21,14 +21,14 @@ export interface ResumeContent {
 export const resumeContent: ResumeContent = {
   heading: "Hi, welcome to my resume",
   mainText: [
-    "I’m a full-stack engineer with 5+ years of experience building software for everything from nimble startups to large banks and consultancies. Adept across the full development stack, with deep expertise in backend, frontend, DevOps, and systems architecture.",
+    "I’m a full-stack senior engineer with 6+ years of experience building software for everything from startups to large banks and consultancies. Adept across the full development stack, with deep expertise in backend, frontend, DevOps, and systems architecture.",
     "I’m big on clear communication, team collaboration, and mentoring, and I love applying systems thinking to help teams ship great software faster. Whether I’m hands-on coding or guiding a team through complex decisions, I aim to raise the bar and keep things moving forward.",
   ],
 
   employment: [
     {
-      title: "Software Engineer, Digizoo Services, Sydney",
-      timeText: "October 2023 - PRESENT",
+      title: "Senior Software Engineer, Digizoo Services, Sydney",
+      timeText: "October 2024 - PRESENT",
       projects: [
         {
           blurb: "Core banking integration",
@@ -41,6 +41,12 @@ export const resumeContent: ResumeContent = {
             "Azure",
           ],
         },
+      ],
+    },
+    {
+      title: "Software Engineer, Digizoo Services, Sydney",
+      timeText: "October 2023 - October 2024",
+      projects: [
         {
           blurb: "Data pipelines for online banking",
           company: "ING",
