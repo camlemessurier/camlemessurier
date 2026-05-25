@@ -110,15 +110,13 @@ const Index = () => {
 
 					<ContentSection heading='Employment'>
 						{resumeContent.employment.map(
-							({ title, timeText, achievements, technologies, blurb, projects }) => (
+							({ title, timeText, achievements, technologies, blurb }) => (
 								<ContentItem
 									key={title}
 									title={title}
 									blurb={blurb}
 									timeText={timeText}
 									achievements={achievements}
-									technologies={technologies}
-									projects={projects}
 								/>
 							)
 						)}

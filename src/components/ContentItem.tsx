@@ -21,7 +21,7 @@ const iconColor = { light: "gray.700", dark: "grey.200" };
 const cardColor = { light: "white", dark: "gray.800" };
 const tagColor = { light: "gray.200", dark: "gray.400" };
 
-export const ContentItem = ({ title, achievements, blurb, projects, technologies, timeText }: EmploymentContent) => {
+export const ContentItem = ({ title, achievements, blurb, technologies, timeText }: EmploymentContent) => {
 	const { colorMode } = useColorMode();
 
 	return (
