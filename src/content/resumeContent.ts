@@ -1,11 +1,6 @@
 export interface EmploymentContent {
   title: string;
   timeText?: string;
-  projects?: {
-    company: string;
-    blurb: string;
-    technologies?: string[];
-  }[];
   blurb?: string;
   achievements?: string[];
   technologies?: string[];
@@ -21,58 +16,45 @@ export interface ResumeContent {
 export const resumeContent: ResumeContent = {
   heading: "Hi, welcome to my resume",
   mainText: [
-    "I’m a full-stack senior engineer with 6+ years of experience building software for everything from startups to large banks and consultancies. Adept across the full development stack, with deep expertise in backend, frontend, DevOps, and systems architecture.",
-    "I’m big on clear communication, team collaboration, and mentoring, and I love applying systems thinking to help teams ship great software faster. Whether I’m hands-on coding or guiding a team through complex decisions, I aim to raise the bar and keep things moving forward.",
+    "I'm a full-stack senior engineer with 6+ years of experience building software for everything from startups to large banks and consultancies. Adept across the full development stack, with deep expertise in backend, frontend, DevOps, and systems architecture.",
+    "I'm big on clear communication, team collaboration, and mentoring, and I love applying systems thinking to help teams ship great software faster. Whether I'm hands-on coding or guiding a team through complex decisions, I aim to raise the bar and keep things moving forward.",
   ],
 
   employment: [
     {
       title: "Senior Software Engineer, Digizoo Services, Sydney",
-      timeText: "October 2024 - PRESENT",
-      projects: [
-        {
-          blurb: "Core banking integration",
-          company: "Regional Australia Bank",
-          technologies: [
-            "NestJS",
-            "TypeScript",
-            "SQL Server",
-            "Turborepo",
-            "Azure",
-          ],
-        },
+      timeText: "October 2023 - March 2026",
+      blurb:
+        "Worked across several client engagements in the finance sector as part of a boutique technology consultancy.",
+      achievements: [
+        "Built high-throughput real-time data pipelines bridging core banking and digital services for a major international bank.",
+        "Delivered engineering uplift for a major regional Australian bank.",
+        "Developed banking integration products targeting the mutual banking sector.",
       ],
-    },
-    {
-      title: "Software Engineer, Digizoo Services, Sydney",
-      timeText: "October 2023 - October 2024",
-      projects: [
-        {
-          blurb: "Data pipelines for online banking",
-          company: "ING",
-          technologies: [
-            "Kafka",
-            "KStreams",
-            "Avro",
-            "Spring",
-            "Java",
-            "SQL Server",
-            "Azure",
-            "Grafana",
-            "Prometheus",
-            "OTEL",
-            "Unix",
-          ],
-        },
+      technologies: [
+        "NestJS",
+        "TypeScript",
+        "SQL Server",
+        "Turborepo",
+        "Azure",
+        "Kafka",
+        "KStreams",
+        "Avro",
+        "Spring",
+        "Java",
+        "Grafana",
+        "Prometheus",
+        "OTEL",
+        "Unix",
       ],
     },
     {
       title: "Software Engineer, Greater Bank, Newcastle",
       timeText: "April 2022 - October 2023",
       blurb:
-        "As part of a digital transformation project, I helped build and deliver a modern, cloud-first digital bank from scratch.",
+        "I helped build and deliver a modern, cloud-first digital bank from the ground up.",
       achievements: [
-        "Helped design and implement  multi-repo release and regression strategy spanning the entire digital stack.",
+        "Helped design and implement a multi-repo release and regression strategy spanning the entire digital stack.",
         "Designed and deployed shared CI/CD configuration across microservices to standardise and enforce release, testing, quality, and compliance processes.",
         "Implemented an automated dependency management solution for 30+ repositories to meet strict security requirements.",
         "Performed performance testing and fixed bottlenecks, leading to considerable increases in application stability and significant reduction in response times.",
@@ -95,11 +77,11 @@ export const resumeContent: ResumeContent = {
       title: "Software Engineer, BodyMindLife Online, Newcastle",
       timeText: "October 2021 - April 2022",
       blurb:
-        "Worked with startup team to build and grow new online yoga streaming platform.",
+        "Worked with a startup team to build and grow a new online yoga streaming platform.",
       achievements: [
-        "Involved in all stages of feature development from inception to deployment.",
+        "Participated in all stages of feature development from inception to deployment.",
         "Automated and integrated end-to-end testing via CI/CD pipelines.",
-        "Responsible for an authentication microservice gateway to connect multiple IAM providers.",
+        "Developed an authentication microservice gateway connecting multiple IAM providers.",
       ],
       technologies: [
         "Next.js",
@@ -115,7 +97,6 @@ export const resumeContent: ResumeContent = {
         "GCP",
       ],
     },
-
     {
       title: "Intern, Userlot, Newcastle",
       timeText: "February 2021 - October 2021",
@@ -134,24 +115,17 @@ export const resumeContent: ResumeContent = {
     {
       title: "Junior Software Engineer, Newton Green Technologies, Newcastle",
       timeText: "November 2020 - October 2021",
-      projects: [
-        {
-          blurb: "Real-time aged care communication platform",
-          company: "Whistle",
-          technologies: ["Laravel", "PHP", "Redis"],
-        },
-        {
-          blurb: "Community pest tracker",
-          company: "FeralScan",
-          technologies: ["ServiceStack", "C#"],
-        },
+      achievements: [
+        "Real-time aged care communication platform (Whistle).",
+        "Community pest tracker (FeralScan).",
       ],
+      technologies: ["Laravel", "PHP", "Redis", "ServiceStack", "C#"],
     },
     {
       title: "Junior Developer, Global Acoustics, Newcastle",
       timeText: "February 2020 - November 2020",
       blurb:
-        "Solely responsible for delivery of a full-stack safety management tracker used by on-the-ground teams every day to log safety and compliance paperwork.",
+        "Independently delivered a full-stack safety management tracker used by on-the-ground teams every day to log safety and compliance paperwork.",
       technologies: [
         "Next.js",
         "Express",

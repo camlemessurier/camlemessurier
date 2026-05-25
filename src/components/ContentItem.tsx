@@ -21,7 +21,7 @@ const iconColor = { light: "gray.700", dark: "grey.200" };
 const cardColor = { light: "white", dark: "gray.800" };
 const tagColor = { light: "gray.200", dark: "gray.400" };
 
-export const ContentItem = ({ title, achievements, blurb, projects, technologies, timeText }: EmploymentContent) => {
+export const ContentItem = ({ title, achievements, blurb, technologies, timeText }: EmploymentContent) => {
 	const { colorMode } = useColorMode();
 
 	return (
@@ -49,66 +49,6 @@ export const ContentItem = ({ title, achievements, blurb, projects, technologies
 					</Text>
 				)}
 
-				{projects && (
-					<Box mt={4}>
-
-						<SubHeading>Projects</SubHeading>
-
-						<List spacing={6}>
-
-							{projects?.map((project) => (
-
-								<ListItem key={project.company} listStylePos={"outside"}>
-									<Flex>
-										<Box>
-											<ListIcon
-												as={ChevronRightIcon}
-												color={iconColor[colorMode]}
-											/>
-										</Box>
-										<Box key={project.company} mt={0.5} pb={2}>
-											<Flex gap={3}>
-												<Text
-													fontWeight='700'
-													fontSize='15'  >
-													{project.company}
-												</Text>
-												<Flex gap={3} fontWeight={'500'} fontStyle={'italic'} fontSize={'15'} color={highlight[colorMode]}>
-													<Text >
-														—
-													</Text>
-													<Text >
-														{project.blurb}
-													</Text>
-
-												</Flex>
-
-											</Flex>
-
-
-
-											{
-												project.technologies && (
-													<Box mt={4} >
-														<Wrap>
-															{project.technologies?.map((li) => (
-																<WrapItem key={li}>
-																	<Tag color={iconColor.light} backgroundColor={tagColor[colorMode]}>{li}</Tag>
-																</WrapItem>
-															))}
-														</Wrap>
-													</Box>
-												)
-											}
-										</Box>
-									</Flex>
-								</ListItem>
-
-
-							))}
-						</List>
-					</Box>)
-				}
 
 				<Box>
 
