@@ -1,6 +1,10 @@
-export interface EmploymentContent {
+export interface RoleProgression {
   title: string;
   timeText?: string;
+}
+
+export interface EmploymentContent {
+  roles: RoleProgression[];
   blurb?: string;
   achievements?: string[];
   technologies?: string[];
@@ -22,8 +26,16 @@ export const resumeContent: ResumeContent = {
 
   employment: [
     {
-      title: "Senior Software Engineer, Digizoo Services, Sydney",
-      timeText: "October 2023 - March 2026",
+      roles: [
+        {
+          title: "Senior Software Engineer, Digizoo Services, Sydney",
+          timeText: "October 2024 - March 2026",
+        },
+        {
+          title: "Software Engineer, Digizoo Services, Sydney",
+          timeText: "October 2023 - October 2024",
+        },
+      ],
       blurb:
         "Worked across several client engagements in the finance sector as part of a boutique technology consultancy.",
       achievements: [
@@ -49,8 +61,12 @@ export const resumeContent: ResumeContent = {
       ],
     },
     {
-      title: "Software Engineer, Greater Bank, Newcastle",
-      timeText: "April 2022 - October 2023",
+      roles: [
+        {
+          title: "Software Engineer, Greater Bank, Newcastle",
+          timeText: "April 2022 - October 2023",
+        },
+      ],
       blurb:
         "I helped build and deliver a modern, cloud-first digital bank from the ground up.",
       achievements: [
@@ -74,8 +90,12 @@ export const resumeContent: ResumeContent = {
       ],
     },
     {
-      title: "Software Engineer, BodyMindLife Online, Newcastle",
-      timeText: "October 2021 - April 2022",
+      roles: [
+        {
+          title: "Software Engineer, BodyMindLife Online, Newcastle",
+          timeText: "October 2021 - April 2022",
+        },
+      ],
       blurb:
         "Worked with a startup team to build and grow a new online yoga streaming platform.",
       achievements: [
@@ -98,8 +118,12 @@ export const resumeContent: ResumeContent = {
       ],
     },
     {
-      title: "Intern, Userlot, Newcastle",
-      timeText: "February 2021 - October 2021",
+      roles: [
+        {
+          title: "Intern, Userlot, Newcastle",
+          timeText: "February 2021 - October 2021",
+        },
+      ],
       blurb:
         "As part of UON's Work Integrated Learning (WIL) project, I built an embeddable third-party widget to collect surveys from customers and capture data in a dashboard for a local tech startup.",
       technologies: [
@@ -113,8 +137,13 @@ export const resumeContent: ResumeContent = {
       ],
     },
     {
-      title: "Junior Software Engineer, Newton Green Technologies, Newcastle",
-      timeText: "November 2020 - October 2021",
+      roles: [
+        {
+          title:
+            "Junior Software Engineer, Newton Green Technologies, Newcastle",
+          timeText: "November 2020 - October 2021",
+        },
+      ],
       achievements: [
         "Real-time aged care communication platform (Whistle).",
         "Community pest tracker (FeralScan).",
@@ -122,8 +151,12 @@ export const resumeContent: ResumeContent = {
       technologies: ["Laravel", "PHP", "Redis", "ServiceStack", "C#"],
     },
     {
-      title: "Junior Developer, Global Acoustics, Newcastle",
-      timeText: "February 2020 - November 2020",
+      roles: [
+        {
+          title: "Junior Developer, Global Acoustics, Newcastle",
+          timeText: "February 2020 - November 2020",
+        },
+      ],
       blurb:
         "Independently delivered a full-stack safety management tracker used by on-the-ground teams every day to log safety and compliance paperwork.",
       technologies: [
@@ -142,8 +175,12 @@ export const resumeContent: ResumeContent = {
   ],
   education: [
     {
-      title:
-        "Bachelor of Computer Science / Mathematics, University of Newcastle",
+      roles: [
+        {
+          title:
+            "Bachelor of Computer Science / Mathematics, University of Newcastle",
+        },
+      ],
       blurb:
         "Studied topics including artificial intelligence, systems thinking, data science, machine learning, databases, algorithms, system and network security, web development, predictive analytics, operating systems, and human-computer interaction, linear algebra, statistical inference.",
       achievements: [

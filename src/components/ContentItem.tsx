@@ -21,7 +21,7 @@ const iconColor = { light: "gray.700", dark: "grey.200" };
 const cardColor = { light: "white", dark: "gray.800" };
 const tagColor = { light: "gray.200", dark: "gray.400" };
 
-export const ContentItem = ({ title, achievements, blurb, technologies, timeText }: EmploymentContent) => {
+export const ContentItem = ({ roles, achievements, blurb, technologies }: EmploymentContent) => {
 	const { colorMode } = useColorMode();
 
 	return (
@@ -35,20 +35,23 @@ export const ContentItem = ({ title, achievements, blurb, technologies, timeText
 				bg={cardColor[colorMode]}
 				sx={{ pageBreakInside: "avoid" }}
 			>
-				<Heading size='md' as={"h3"}>
-					{title}
-				</Heading>
-				{timeText && (
-					<Text
-						fontWeight='600'
-						fontSize='14'
-						color={highlight[colorMode]}
-						casing='capitalize'
-					>
-						{timeText}
-					</Text>
-				)}
-
+				{roles.map((role, idx) => (
+					<Box key={`${role.title}-${idx}`} mb={idx < roles.length - 1 ? 2 : 0}>
+						<Heading size='md' as={"h3"}>
+							{role.title}
+						</Heading>
+						{role.timeText && (
+							<Text
+								fontWeight='600'
+								fontSize='14'
+								color={highlight[colorMode]}
+								casing='capitalize'
+							>
+								{role.timeText}
+							</Text>
+						)}
+					</Box>
+				))}
 
 				<Box>
 
